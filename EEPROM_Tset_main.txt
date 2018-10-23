@@ -1,0 +1,84 @@
+int main(void)
+{
+	int i = 0;
+	int DataF = 0;
+	char td = 0;
+	char* tempAddr = Write_25LC256_buffer;
+	int count, addr=0;
+	xcptn_xmpl ();              /* Configure and Enable Interrupts */
+
+    SysClk_Init();
+    InitPeriClkGen();
+
+    gpio_init();
+    /*LED1_ON;
+    LED2_ON;
+    LED3_OFF;*/
+
+     SPI_25LC256_Pin_Init();
+     SPI_25LC256_Init();
+
+    // EEPROM_Pin_Init();   //Ä£ÄâSPI³õÊ¼»¯
+    PowerHold_low;
+    for(i=0; i<100; ++i)
+    {
+    	Write_25LC256_buffer[i] = td;
+    	if(td == 99)
+    		td = 1;
+    	else
+    		++td;
+    }
+/*
+    PIT_Init(50);	//0.001ms
+    PIT_0.TIMER[0].TCTRL.B.TEN = 1;*/
+    for(count =0; count <30; count++)
+    {/*
+    	switch(DataF)
+    	{
+    		case 0:
+    			tempAddr = Write_25LC256_buffer;
+    			++DataF;
+    			break;
+    		case 1:
+    			tempAddr += 32;
+    			++DataF;
+    			break;
+    		case 2:
+    			tempAddr += 32;
+    			DataF = 0;
+    			break;
+    	}*/
+		SPI_25LC256_WriteMul(addr, 32, &saveerr[count][0]);
+		addr += 32;
+    }
+    while(1)
+    {
+    //	if(FFF)
+    		SPI_25LC256_ReadMul(0,960, Read_25LC256_buffer);
+    	/*
+    	delay_test0(10000);
+    	for(count=0; count<10; ++count)
+    	{
+    		SPI_25LC256_ReadMul(addrRead,20, Read_25LC256_buffer);
+    		addrRead += 20;
+    		delay_test0(100);
+    	}*/
+    	/*
+    	EEPROM_Write_Mul(0x0000,12,"EEPROM WandR");
+    	EEPROM_Read_Mul(0x0000,12,Read_25LC256_buffer);
+    	delay_test0(1000);
+    	*/
+    	delay_test0(10);
+    }
+    return 0;
+}
+void delay_test0(unsigned int t)
+{
+	int i,j;
+	j=1000;     //2  0.8us
+	for(i=0;i<t;i++)
+	{
+		while(j > 0)
+			j--;
+	}
+}

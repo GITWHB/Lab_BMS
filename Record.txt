@@ -1,0 +1,43 @@
+以下为各模块测试时用到的语句
+
+1、延时断电模块
+    PowerHold_high;
+    DO1_CTL_high;
+以上两句放在初始化中，只执行一次
+	if(ONIN_state == 1)   //代表钥匙关了
+    {
+    	StartTimer=1;
+    	Start_Pit0;
+    }
+    else if(ONIN_state == 0)
+    {
+    	PowerHold_high;
+    	StartTimer=0;
+    	Stop_Pit0;
+    	Count_PowerHold=0;
+    }
+以上语句需要定时读输入状态
+2、AD转换模块
+    ADC1_CH3_PinInit();
+    ADC1_Calibration();
+    ADC1_Init();
+以上语句只执行一次
+	ADC1_StartConvert();
+    Data = ADC1_CH3_ReadData();
+  以上语句为开始采样和读取结果
+3、CAN通信
+initCAN_0();  //CAN0 初始化
+CAN_Trans(6,"ABCDEF");//数据发送
+4、DS1302实时时钟
+  DS1302_Init();
+  以上语句只执行一次
+  DS1302_Read();
+  以上为读取DS1302时间数据
+ 5、模拟SPI的写入与读取
+ 
+EEPROM_Pin_Init();
+ 
+EEPROM_Write_Mul(0x04,strlen(Write_25LC256_buffer),Write_25LC256_buffer);
+delay_test0(1000);delay_test0(1000);delay_test0(1000);delay_test0(1000);
+EEPROM_Read_Mul(0x0004,strlen(Write_25LC256_buffer),Read_25LC256_buffer);
+delay_test0(1000);
