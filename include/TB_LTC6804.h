@@ -3,6 +3,8 @@
 #ifndef TB_LTC6804_H_
 #define TB_LTC6804_H_
 
+#define NUM_COMMAND  9
+
 #define WRCFG1 	 	(1)
 #define WRCFG2 		(2)
 #define WRCFG3 		(3)
@@ -52,7 +54,7 @@ void SPISendReceive();
 void SPI_Init();
 unsigned char SPI_DataRec0();
 void SPI_Send_Continuous0(uint8_t *Data_Tx,uint8_t length);
-void vol_sample();
+void vol_sample(unsigned char Num_6804);
 void delay_test(unsigned char t);
 uint8_t SPI_mid_DataSend(uint8_t Data_Tx);
 

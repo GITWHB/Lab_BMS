@@ -14,7 +14,7 @@ volatile unsigned char  SPILINE = 0;
 unsigned long resettime = 30000;
 unsigned char wake_up_counts=0;
 unsigned char sendable = 0;
-volatile unsigned char g_SPI_Rx_array[33][12] = {0};//SPI接收数据的数组
+volatile unsigned char g_SPI_Rx_array[42][12] = {0};//SPI接收数据的数组
 
 volatile short pec15Table[256]={
 0x0,	0xc599,	0xceab,	0xb32,	0xd8cf,	0x1d56,	0x1664,	0xd3fd,	0xf407,	0x319e,	0x3aac,	0xff35,	0x2cc8,	0xe951,	0xe263,	0x27fa,
@@ -35,10 +35,21 @@ volatile short pec15Table[256]={
 0xa76f,	0x62f6,	0x69c4,	0xac5d,	0x7fa0,	0xba39,	0xb10b,	0x7492,	0x5368,	0x96f1,	0x9dc3,	0x585a,	0x8ba7,	0x4e3e,	0x450c,	0x8095,
 };
 
-volatile unsigned char SPIDATA2[33][12]=
+volatile unsigned char SPIDATA2[42][12]=
 	{
 		    //1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19   20   21   22   23   24   25   26   27   27
 			//0x80,0x01,0x4D,0x7A,0xFC,0x00,0x00,0x00,0x00,0x00,0x4F,0x82,// WRCFG // 1 // 1 //refon=1
+		 	0x80,0x01,0x4D,0x7A,0xF8,0x00,0x00,0x00,0x00,0x00,0xBE,0xE2,// WRCFG // 1 // 1 //
+		 	0x83,0x70,0xDF,0x56,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//ADCV // 1 // 4 //
+		 	0x80,0x04,0x77,0xD6,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDCVA // 1 // 7 //
+		 	0x80,0x06,0xEA,0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDCVB // 1 // 8 //
+		 	0x80,0x08,0x2E,0x46,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDCVC // 1 // 9 //
+		 	0x80,0x0a,0xB3,0x10,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDCVD // 1 // 10 //
+		 	0x85,0x60,0xA3,0xB4,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//ADCVAX // 1 // 19 //
+		 	0x80,0x0c,0x9F,0xD8,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDAUXA // 1 // 21 //
+		 	0x80,0x0e,0x02,0x8E,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDAUXB // 1 // 22 //
+			0xE5,0x60,0x42,0x22,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+
 			0x80,0x01,0x4D,0x7A,0xF8,0x00,0x00,0x00,0x00,0x00,0xBE,0xE2,// WRCFG // 1 // 1 //
 			0xC0,0x01,0x75,0x70,0xF8,0x00,0x00,0x00,0x00,0x00,0xBE,0xE2,// WRCFG // 2 // 2 //
 			0xE0,0x01,0xAC,0xEC,0xF8,0x00,0x00,0x00,0x00,0x00,0xBE,0xE2,// WRCFG // 3 // 3 //
@@ -104,11 +115,17 @@ volatile unsigned char SPIDATA2[33][12]=
 		    0xE0,0x0e,0xE3,0x18,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//RDAUXB // 3 // 33 //
 
 	};
+/*volatile unsigned char SPIDATALEN2[33]=
+	{
+    //1 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+     12,12,12,04,04,04,12,12,12,12,12,12,12,12,12,12,12,12,04,04,12,12,12,12,04,04,04,04,04,04,04,12,12
+	};*/
+
 
 volatile unsigned char SPIDATALEN2[33]=
 	{
     //1 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
-     12,12,12,04,04,04,12,12,12,12,12,12,12,12,12,12,12,12,04,04,12,12,12,12,04,04,04,04,04,04,04,12,12
+     12,04,12,12,12,12,04,12,12,04,12,12,12,12,12,12,12,12,04,04,12,12,12,12,04,04,04,04,04,04,04,12,12
 	};
 
 unsigned short pec15(char *data , short len)
@@ -254,14 +271,14 @@ void DataOrganization()
 	{
 		case WRCFG1://写配置寄存器1
 		{
-			SPILINE = 0;			//12
+			SPILINE += 0;			//12
 			gCommandType = ADCV1;
 			sendable =1;
 			break;
 		}
 		case ADCV1://测量电池电压1
 		{
-			SPILINE = 3;		//4
+			SPILINE += 1;		//4
 			gCommandType=SPIWAIT;
 			sendable =1;
 			break;
@@ -281,7 +298,7 @@ void DataOrganization()
 		}
 		case RDCVA1://读电池电压A1
 		{
-			SPILINE = 6;		//12
+			SPILINE += 1;		//12
 			//gCommandType=RDCVB1;
 			gCommandType = RDCVB1;
 			sendable =1;
@@ -290,35 +307,35 @@ void DataOrganization()
 		}
 		case RDCVB1://读电池电压B1
 		{
-			SPILINE = 7;		//12
+			SPILINE += 1;		//12
 			gCommandType=RDCVC1;
 			sendable =1;
 			break;
 		}
 		case RDCVC1://读电池电压C1
 		{
-			SPILINE = 8;		//12
+			SPILINE += 1;		//12
 			gCommandType=RDCVD1;
 			sendable =1;
 			break;
 		}
 		case RDCVD1://读电池电压D1
 		{
-			SPILINE = 9;		//12
+			SPILINE += 1;		//12
 			gCommandType=ADCVAX1;
 			sendable =1;
 			break;
 		}
 		case ADCVAX1://启动组合电池电压以及GPIO转换和轮询状态
 		{
-			SPILINE = 18;		//4
+			SPILINE += 1;		//4
 			gCommandType=35;
 			sendable =1;
 			break;
 		}
 		case 35:
 		{
-			SPILINE = 30;
+			SPILINE = 9;
 			gCommandType=SPIWAIT2;
 			sendable =1;
 			break;
@@ -338,14 +355,14 @@ void DataOrganization()
 		}
 		case RDAUXA1://读辅助寄存器A1
 		{
-			SPILINE = 20;
+			SPILINE += 1;
 			gCommandType=RDAUXB1;
 			sendable =1;
 			break;
 		}
 		case RDAUXB1://读辅助寄存器B1
 		{
-			SPILINE = 21;
+			SPILINE += 1;
 			gCommandType = SPIRESET;
 			sendable =1;
 			break;
@@ -366,7 +383,7 @@ void DataOrganization()
 	}
 }
 
-void vol_sample()
+void vol_sample(unsigned char Num_6804)
 {
 	static int i=0;
 	static unsigned char temp=0;
@@ -375,6 +392,11 @@ void vol_sample()
 	static int tmp[6] = {0};
 
 	uint8_t recNum = 0;
+	if(gCommandType == WRCFG1)
+	{
+		//确定命令数组的起始位置
+		SPILINE = Num_6804 * NUM_COMMAND;
+	}
 	if(sendable == 0)
 		DataOrganization();
 	if(i<SPIDATALEN2[SPILINE] && sendable == 1)
@@ -410,17 +432,17 @@ void vol_sample()
 	if(gCommandType == SPIRESET)
 	{
 	//g_SPI_Rx_array[temp][rows] = 1;
-		for(num=6; num<10; num++)
+		for(num=2; num<6; num++)
 		{
-			cell[(num-6)*3] =  ((unsigned short)(g_SPI_Rx_array[num][5]) << 8) + (unsigned short)g_SPI_Rx_array[num][4];
-			cell[(num-6)*3+1] =  ((unsigned short)(g_SPI_Rx_array[num][7]) << 8) + (unsigned short)g_SPI_Rx_array[num][6];
-			cell[(num-6)*3+2] =  ((unsigned short)(g_SPI_Rx_array[num][9]) << 8) + (unsigned short)g_SPI_Rx_array[num][8];
+			cell[(num-2)*3] =  ((unsigned short)(g_SPI_Rx_array[num][5]) << 8) + (unsigned short)g_SPI_Rx_array[num][4];
+			cell[(num-2)*3+1] =  ((unsigned short)(g_SPI_Rx_array[num][7]) << 8) + (unsigned short)g_SPI_Rx_array[num][6];
+			cell[(num-2)*3+2] =  ((unsigned short)(g_SPI_Rx_array[num][9]) << 8) + (unsigned short)g_SPI_Rx_array[num][8];
 		}
-		for(num = 20;num < 22; num++)
+		for(num = 7;num < 9; num++)
 		{
-			tmp[(num-20)*3] =  ((unsigned short)(g_SPI_Rx_array[num][5]) << 8) + (unsigned short)g_SPI_Rx_array[num][4];
-			tmp[(num-20)*3+1] =  ((unsigned short)(g_SPI_Rx_array[num][7]) << 8) + (unsigned short)g_SPI_Rx_array[num][6];
-			tmp[(num-20)*3+2] =  ((unsigned short)(g_SPI_Rx_array[num][9]) << 8) + (unsigned short)g_SPI_Rx_array[num][8];
+			tmp[(num-7)*3] =  ((unsigned short)(g_SPI_Rx_array[num][5]) << 8) + (unsigned short)g_SPI_Rx_array[num][4];
+			tmp[(num-7)*3+1] =  ((unsigned short)(g_SPI_Rx_array[num][7]) << 8) + (unsigned short)g_SPI_Rx_array[num][6];
+			tmp[(num-7)*3+2] =  ((unsigned short)(g_SPI_Rx_array[num][9]) << 8) + (unsigned short)g_SPI_Rx_array[num][8];
 		}
 		cell;
 	}

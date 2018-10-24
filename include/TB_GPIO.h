@@ -10,7 +10,7 @@
 
 #include "project.h"
 
-#define BOARD   0   	//0  ≤‚ ‘∞Â
+#define BOARD   1   	//0  ≤‚ ‘∞Â
 						//1 SPIµ•∞Â
 
 #if (BOARD == 1)

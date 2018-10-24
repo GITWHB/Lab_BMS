@@ -104,7 +104,7 @@ void PIT0_CH0_ISR()    //100us
 		LED1_OFF;
 		flag = 0;
 	}
-	vol_sample(); //采样
+	vol_sample(0); //采样, 入参指定采样板编号
 	/*static int times = 0;
 	static int count = 0;
 	++times;
