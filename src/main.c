@@ -99,7 +99,6 @@ void PIT0_CH0_ISR()    //100us
 	{
 		LED1_ON;
 		flag = 1;
-		//vol_sample(0, CellVol); //采样, 入参指定采样板编号
 	}
 	else
 	{
@@ -108,7 +107,7 @@ void PIT0_CH0_ISR()    //100us
 
 	}
 	vol_sample(0, CellVol); //采样, 入参指定采样板编号
-
+	vol_sample(1, CellVol); //采样, 入参指定采样板编号
 	/*static int times = 0;
 	static int count = 0;
 	++times;
