@@ -62,6 +62,7 @@ char  FFF = 0;
 char       Read_25LC256_buffer[1000] = {'S'};
 char       Write_25LC256_buffer[100] = {'A'};
 char       DataRec_485[15];   //用来存储从485接收到的数据
+int 	   CellVol[2][12] = {0};
 //delay   延时函数
 void delay_test0(unsigned int t);
 extern void xcptn_xmpl(void);
@@ -98,13 +99,16 @@ void PIT0_CH0_ISR()    //100us
 	{
 		LED1_ON;
 		flag = 1;
+		//vol_sample(0, CellVol); //采样, 入参指定采样板编号
 	}
 	else
 	{
 		LED1_OFF;
 		flag = 0;
+
 	}
-	vol_sample(0); //采样, 入参指定采样板编号
+	vol_sample(0, CellVol); //采样, 入参指定采样板编号
+
 	/*static int times = 0;
 	static int count = 0;
 	++times;
