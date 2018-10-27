@@ -294,8 +294,6 @@ Discarded input sections
  .sbss.SPILINE  0x00000000        0x1 ./src/TB_LTC6804.o
  .sdata.resettime
                 0x00000000        0x4 ./src/TB_LTC6804.o
- .sbss.wake_up_counts
-                0x00000000        0x1 ./src/TB_LTC6804.o
  .sbss.sendable
                 0x00000000        0x1 ./src/TB_LTC6804.o
  .bss.g_SPI_Rx_array
@@ -313,22 +311,24 @@ Discarded input sections
                 0x00000000       0x74 ./src/TB_LTC6804.o
  .text.SPI_mid_DataSend
                 0x00000000       0x74 ./src/TB_LTC6804.o
+ .text.Wakeup6804
+                0x00000000       0xc2 ./src/TB_LTC6804.o
  .text.DataOrganization
                 0x00000000      0x320 ./src/TB_LTC6804.o
  .rodata.DataOrganization
                 0x00000000       0x90 ./src/TB_LTC6804.o
  .text.vol_sample
-                0x00000000      0x75a ./src/TB_LTC6804.o
+                0x00000000      0x75e ./src/TB_LTC6804.o
  .text.delay_test
                 0x00000000       0x70 ./src/TB_LTC6804.o
- .bss.i.14051   0x00000000        0x4 ./src/TB_LTC6804.o
- .bss.temp.14053
+ .bss.i.14056   0x00000000        0x4 ./src/TB_LTC6804.o
+ .bss.temp.14058
                 0x00000000        0x1 ./src/TB_LTC6804.o
- .bss.rows.14054
+ .bss.rows.14059
                 0x00000000        0x1 ./src/TB_LTC6804.o
- .bss.num.14052
+ .bss.num.14057
                 0x00000000        0x4 ./src/TB_LTC6804.o
- .bss.tmp.14055
+ .bss.tmp.14060
                 0x00000000       0x18 ./src/TB_LTC6804.o
  .debug_macro   0x00000000      0x616 ./src/TB_LTC6804.o
  .debug_macro   0x00000000       0x52 ./src/TB_LTC6804.o
@@ -1201,7 +1201,7 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .comment       0x0000008e       0x8f ./src/MPC57xx__Interrupt_Init.o
  .comment       0x0000008e       0x8f D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_line     0x00000000     0x2e25
+.debug_line     0x00000000     0x2e46
  .debug_line    0x00000000       0xdb ./Project_Settings/Startup_Code/startup.o
  .debug_line    0x000000db      0x341 ./src/main.o
  .debug_line    0x0000041c       0x5d ./src/intc_sw_handlers.o
@@ -1211,18 +1211,18 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_line    0x000008fc      0x334 ./src/TB_UART.o
  .debug_line    0x00000c30      0x1f7 ./src/TB_PIT.o
  .debug_line    0x00000e27      0x317 ./src/TB_Mul6804.o
- .debug_line    0x0000113e      0x395 ./src/TB_LTC6804.o
- .debug_line    0x000014d3      0x21c ./src/TB_GPIO.o
- .debug_line    0x000016ef      0x36b ./src/TB_DS1302.o
- .debug_line    0x00001a5a      0x2c0 ./src/TB_CAN.o
- .debug_line    0x00001d1a      0x55a ./src/TB_AnSPI.o
- .debug_line    0x00002274      0x28d ./src/TB_ADC.o
- .debug_line    0x00002501      0x427 ./src/TB_25LC256.o
- .debug_line    0x00002928      0x22d ./src/SysClk.o
- .debug_line    0x00002b55      0x248 ./src/MPC57xx__Interrupt_Init.o
- .debug_line    0x00002d9d       0x88 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_line    0x0000113e      0x3b6 ./src/TB_LTC6804.o
+ .debug_line    0x000014f4      0x21c ./src/TB_GPIO.o
+ .debug_line    0x00001710      0x36b ./src/TB_DS1302.o
+ .debug_line    0x00001a7b      0x2c0 ./src/TB_CAN.o
+ .debug_line    0x00001d3b      0x55a ./src/TB_AnSPI.o
+ .debug_line    0x00002295      0x28d ./src/TB_ADC.o
+ .debug_line    0x00002522      0x427 ./src/TB_25LC256.o
+ .debug_line    0x00002949      0x22d ./src/SysClk.o
+ .debug_line    0x00002b76      0x248 ./src/MPC57xx__Interrupt_Init.o
+ .debug_line    0x00002dbe       0x88 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_info     0x00000000    0x1bfd2
+.debug_info     0x00000000    0x1bfe7
  .debug_info    0x00000000       0x7e ./Project_Settings/Startup_Code/startup.o
  .debug_info    0x0000007e     0x4151 ./src/main.o
  .debug_info    0x000041cf       0x6d ./src/intc_sw_handlers.o
@@ -1232,18 +1232,18 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_info    0x000043a4     0x29de ./src/TB_UART.o
  .debug_info    0x00006d82      0x8aa ./src/TB_PIT.o
  .debug_info    0x0000762c     0x1f2d ./src/TB_Mul6804.o
- .debug_info    0x00009559     0x2040 ./src/TB_LTC6804.o
- .debug_info    0x0000b599     0x152e ./src/TB_GPIO.o
- .debug_info    0x0000cac7     0x1691 ./src/TB_DS1302.o
- .debug_info    0x0000e158     0x2b97 ./src/TB_CAN.o
- .debug_info    0x00010cef     0x17af ./src/TB_AnSPI.o
- .debug_info    0x0001249e     0x3d11 ./src/TB_ADC.o
- .debug_info    0x000161af     0x1ed6 ./src/TB_25LC256.o
- .debug_info    0x00018085     0x3872 ./src/SysClk.o
- .debug_info    0x0001b8f7      0x5eb ./src/MPC57xx__Interrupt_Init.o
- .debug_info    0x0001bee2       0xf0 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_info    0x00009559     0x2055 ./src/TB_LTC6804.o
+ .debug_info    0x0000b5ae     0x152e ./src/TB_GPIO.o
+ .debug_info    0x0000cadc     0x1691 ./src/TB_DS1302.o
+ .debug_info    0x0000e16d     0x2b97 ./src/TB_CAN.o
+ .debug_info    0x00010d04     0x17af ./src/TB_AnSPI.o
+ .debug_info    0x000124b3     0x3d11 ./src/TB_ADC.o
+ .debug_info    0x000161c4     0x1ed6 ./src/TB_25LC256.o
+ .debug_info    0x0001809a     0x3872 ./src/SysClk.o
+ .debug_info    0x0001b90c      0x5eb ./src/MPC57xx__Interrupt_Init.o
+ .debug_info    0x0001bef7       0xf0 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_abbrev   0x00000000     0x171b
+.debug_abbrev   0x00000000     0x1733
  .debug_abbrev  0x00000000       0x14 ./Project_Settings/Startup_Code/startup.o
  .debug_abbrev  0x00000014      0x1dd ./src/main.o
  .debug_abbrev  0x000001f1       0x14 ./src/intc_sw_handlers.o
@@ -1253,18 +1253,18 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_abbrev  0x000002e2      0x1a9 ./src/TB_UART.o
  .debug_abbrev  0x0000048b      0x148 ./src/TB_PIT.o
  .debug_abbrev  0x000005d3      0x20d ./src/TB_Mul6804.o
- .debug_abbrev  0x000007e0      0x261 ./src/TB_LTC6804.o
- .debug_abbrev  0x00000a41      0x12f ./src/TB_GPIO.o
- .debug_abbrev  0x00000b70      0x1cc ./src/TB_DS1302.o
- .debug_abbrev  0x00000d3c      0x198 ./src/TB_CAN.o
- .debug_abbrev  0x00000ed4      0x1e8 ./src/TB_AnSPI.o
- .debug_abbrev  0x000010bc      0x15e ./src/TB_ADC.o
- .debug_abbrev  0x0000121a      0x1d5 ./src/TB_25LC256.o
- .debug_abbrev  0x000013ef      0x12e ./src/SysClk.o
- .debug_abbrev  0x0000151d      0x17d ./src/MPC57xx__Interrupt_Init.o
- .debug_abbrev  0x0000169a       0x81 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_abbrev  0x000007e0      0x279 ./src/TB_LTC6804.o
+ .debug_abbrev  0x00000a59      0x12f ./src/TB_GPIO.o
+ .debug_abbrev  0x00000b88      0x1cc ./src/TB_DS1302.o
+ .debug_abbrev  0x00000d54      0x198 ./src/TB_CAN.o
+ .debug_abbrev  0x00000eec      0x1e8 ./src/TB_AnSPI.o
+ .debug_abbrev  0x000010d4      0x15e ./src/TB_ADC.o
+ .debug_abbrev  0x00001232      0x1d5 ./src/TB_25LC256.o
+ .debug_abbrev  0x00001407      0x12e ./src/SysClk.o
+ .debug_abbrev  0x00001535      0x17d ./src/MPC57xx__Interrupt_Init.o
+ .debug_abbrev  0x000016b2       0x81 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_aranges  0x00000000      0x450
+.debug_aranges  0x00000000      0x458
  .debug_aranges
                 0x00000000       0x20 ./Project_Settings/Startup_Code/startup.o
  .debug_aranges
@@ -1284,42 +1284,42 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_aranges
                 0x00000168       0x40 ./src/TB_Mul6804.o
  .debug_aranges
-                0x000001a8       0x60 ./src/TB_LTC6804.o
+                0x000001a8       0x68 ./src/TB_LTC6804.o
  .debug_aranges
-                0x00000208       0x30 ./src/TB_GPIO.o
+                0x00000210       0x30 ./src/TB_GPIO.o
  .debug_aranges
-                0x00000238       0x50 ./src/TB_DS1302.o
+                0x00000240       0x50 ./src/TB_DS1302.o
  .debug_aranges
-                0x00000288       0x40 ./src/TB_CAN.o
+                0x00000290       0x40 ./src/TB_CAN.o
  .debug_aranges
-                0x000002c8       0x58 ./src/TB_AnSPI.o
+                0x000002d0       0x58 ./src/TB_AnSPI.o
  .debug_aranges
-                0x00000320       0x50 ./src/TB_ADC.o
+                0x00000328       0x50 ./src/TB_ADC.o
  .debug_aranges
-                0x00000370       0x60 ./src/TB_25LC256.o
+                0x00000378       0x60 ./src/TB_25LC256.o
  .debug_aranges
-                0x000003d0       0x28 ./src/SysClk.o
+                0x000003d8       0x28 ./src/SysClk.o
  .debug_aranges
-                0x000003f8       0x38 ./src/MPC57xx__Interrupt_Init.o
+                0x00000400       0x38 ./src/MPC57xx__Interrupt_Init.o
  .debug_aranges
-                0x00000430       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+                0x00000438       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_ranges   0x00000000      0x2f0
+.debug_ranges   0x00000000      0x2f8
  .debug_ranges  0x00000000       0x48 ./src/main.o
  .debug_ranges  0x00000048       0x10 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
  .debug_ranges  0x00000058       0x48 ./src/TB_UART.o
  .debug_ranges  0x000000a0       0x18 ./src/TB_PIT.o
  .debug_ranges  0x000000b8       0x30 ./src/TB_Mul6804.o
- .debug_ranges  0x000000e8       0x50 ./src/TB_LTC6804.o
- .debug_ranges  0x00000138       0x20 ./src/TB_GPIO.o
- .debug_ranges  0x00000158       0x40 ./src/TB_DS1302.o
- .debug_ranges  0x00000198       0x30 ./src/TB_CAN.o
- .debug_ranges  0x000001c8       0x48 ./src/TB_AnSPI.o
- .debug_ranges  0x00000210       0x40 ./src/TB_ADC.o
- .debug_ranges  0x00000250       0x50 ./src/TB_25LC256.o
- .debug_ranges  0x000002a0       0x18 ./src/SysClk.o
- .debug_ranges  0x000002b8       0x28 ./src/MPC57xx__Interrupt_Init.o
- .debug_ranges  0x000002e0       0x10 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_ranges  0x000000e8       0x58 ./src/TB_LTC6804.o
+ .debug_ranges  0x00000140       0x20 ./src/TB_GPIO.o
+ .debug_ranges  0x00000160       0x40 ./src/TB_DS1302.o
+ .debug_ranges  0x000001a0       0x30 ./src/TB_CAN.o
+ .debug_ranges  0x000001d0       0x48 ./src/TB_AnSPI.o
+ .debug_ranges  0x00000218       0x40 ./src/TB_ADC.o
+ .debug_ranges  0x00000258       0x50 ./src/TB_25LC256.o
+ .debug_ranges  0x000002a8       0x18 ./src/SysClk.o
+ .debug_ranges  0x000002c0       0x28 ./src/MPC57xx__Interrupt_Init.o
+ .debug_ranges  0x000002e8       0x10 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
 .debug_macro    0x00000000     0xdeb4
  .debug_macro   0x00000000      0x16e ./src/main.o
@@ -1365,7 +1365,7 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_macro   0x0000dd27       0xbc ./src/SysClk.o
  .debug_macro   0x0000dde3       0xd1 ./src/MPC57xx__Interrupt_Init.o
 
-.debug_str      0x00000000    0x3e652
+.debug_str      0x00000000    0x3e658
  .debug_str     0x00000000    0x3a806 ./src/main.o
                               0x3a90a (size before relaxing)
  .debug_str     0x0003a806       0x44 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
@@ -1380,43 +1380,43 @@ OUTPUT(TestBorad.elf elf32-powerpc)
                               0x3773c (size before relaxing)
  .debug_str     0x0003aeb2      0x474 ./src/TB_Mul6804.o
                               0x39434 (size before relaxing)
- .debug_str     0x0003b326      0x142 ./src/TB_LTC6804.o
-                              0x392aa (size before relaxing)
- .debug_str     0x0003b468       0x2e ./src/TB_GPIO.o
+ .debug_str     0x0003b326      0x148 ./src/TB_LTC6804.o
+                              0x392b0 (size before relaxing)
+ .debug_str     0x0003b46e       0x2e ./src/TB_GPIO.o
                               0x38e2e (size before relaxing)
- .debug_str     0x0003b496       0x9d ./src/TB_DS1302.o
+ .debug_str     0x0003b49c       0x9d ./src/TB_DS1302.o
                               0x38db9 (size before relaxing)
- .debug_str     0x0003b533       0xb9 ./src/TB_CAN.o
+ .debug_str     0x0003b539       0xb9 ./src/TB_CAN.o
                               0x397f5 (size before relaxing)
- .debug_str     0x0003b5ec       0x9c ./src/TB_AnSPI.o
+ .debug_str     0x0003b5f2       0x9c ./src/TB_AnSPI.o
                               0x38da8 (size before relaxing)
- .debug_str     0x0003b688     0x1168 ./src/TB_ADC.o
+ .debug_str     0x0003b68e     0x1168 ./src/TB_ADC.o
                               0x39edd (size before relaxing)
- .debug_str     0x0003c7f0       0xcf ./src/TB_25LC256.o
+ .debug_str     0x0003c7f6       0xcf ./src/TB_25LC256.o
                               0x39169 (size before relaxing)
- .debug_str     0x0003c8bf     0x1af7 ./src/SysClk.o
+ .debug_str     0x0003c8c5     0x1af7 ./src/SysClk.o
                               0x38d93 (size before relaxing)
- .debug_str     0x0003e3b6       0xb9 ./src/MPC57xx__Interrupt_Init.o
+ .debug_str     0x0003e3bc       0xb9 ./src/MPC57xx__Interrupt_Init.o
                               0x376ad (size before relaxing)
- .debug_str     0x0003e46f      0x1e3 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_str     0x0003e475      0x1e3 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
                                 0x281 (size before relaxing)
 
-.debug_frame    0x00000000      0xc20
+.debug_frame    0x00000000      0xc48
  .debug_frame   0x00000000      0x128 ./src/main.o
  .debug_frame   0x00000128       0x2c ./src/intc_SW_mode_isr_vectors_MPC5744P.o
  .debug_frame   0x00000154      0x138 ./src/TB_UART.o
  .debug_frame   0x0000028c       0x58 ./src/TB_PIT.o
  .debug_frame   0x000002e4       0xc8 ./src/TB_Mul6804.o
- .debug_frame   0x000003ac      0x158 ./src/TB_LTC6804.o
- .debug_frame   0x00000504       0x7c ./src/TB_GPIO.o
- .debug_frame   0x00000580      0x11c ./src/TB_DS1302.o
- .debug_frame   0x0000069c       0xc4 ./src/TB_CAN.o
- .debug_frame   0x00000760      0x148 ./src/TB_AnSPI.o
- .debug_frame   0x000008a8      0x10c ./src/TB_ADC.o
- .debug_frame   0x000009b4      0x154 ./src/TB_25LC256.o
- .debug_frame   0x00000b08       0x58 ./src/SysClk.o
- .debug_frame   0x00000b60       0xa0 ./src/MPC57xx__Interrupt_Init.o
- .debug_frame   0x00000c00       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_frame   0x000003ac      0x180 ./src/TB_LTC6804.o
+ .debug_frame   0x0000052c       0x7c ./src/TB_GPIO.o
+ .debug_frame   0x000005a8      0x11c ./src/TB_DS1302.o
+ .debug_frame   0x000006c4       0xc4 ./src/TB_CAN.o
+ .debug_frame   0x00000788      0x148 ./src/TB_AnSPI.o
+ .debug_frame   0x000008d0      0x10c ./src/TB_ADC.o
+ .debug_frame   0x000009dc      0x154 ./src/TB_25LC256.o
+ .debug_frame   0x00000b30       0x58 ./src/SysClk.o
+ .debug_frame   0x00000b88       0xa0 ./src/MPC57xx__Interrupt_Init.o
+ .debug_frame   0x00000c28       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
 .debug_loc      0x00000000       0x41
  .debug_loc     0x00000000       0x41 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)

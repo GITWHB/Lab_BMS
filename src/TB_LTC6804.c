@@ -12,7 +12,6 @@ volatile char Waittime = 30;
 unsigned char openwire = 2;
 volatile unsigned char  SPILINE = 0;
 unsigned long resettime = 30000;
-unsigned char wake_up_counts=0;
 unsigned char sendable = 0;
 volatile unsigned char g_SPI_Rx_array[51][12] = {0};//SPI接收数据的数组
 volatile short pec15Table[256]={
@@ -275,7 +274,28 @@ uint8_t SPI_mid_DataSend(uint8_t Data_Tx)
 	SPI_3.SR.B.RFDF = 1;
 	return RecDataMaster;
 }
+void Wakeup6804()
+{
+	unsigned char WakeupCnt = 0;
 
+	while(WakeupCnt < 3)
+	{
+		WakeupCnt++;
+		if(WakeupCnt == 1)
+		{
+			SIUL2.GPDO[PD10].R  = 0;
+		}
+		else if(WakeupCnt == 2)
+		{
+			SIUL2.GPDO[PD10].R  = 1;
+		}
+		else if(WakeupCnt == 3)
+		{
+			SIUL2.GPDO[PD10].R  = 0;
+		}
+		delay_test(1);
+	}
+}
 void DataOrganization()
 {
 	switch(gCommandType)
@@ -406,6 +426,7 @@ void vol_sample(unsigned char Num_6804, int cell[][12])
 	{
 		//确定命令数组的起始位置
 		SPILINE = Num_6804 * NUM_COMMAND;
+		Wakeup6804();
 	}
 	if(sendable == 0)
 		DataOrganization();

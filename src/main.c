@@ -107,8 +107,10 @@ void PIT0_CH0_ISR()    //0.1ms
 		LED1_OFF;
 		flag = 0;
 	}
+	//vol_sample(0, CellVol); //采样, 入参指定采样板编号
 	//vol_sample(1, CellVol); //采样, 入参指定采样板编号
-	vol_sample_Mul(CellVol); //采样, 入参指定采样板编号
+
+	vol_sample_Mul(CellVol); //顺序采样
 	/*static int times = 0;
 	static int count = 0;
 	++times;
