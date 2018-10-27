@@ -228,6 +228,43 @@ Discarded input sections
  .debug_macro   0x00000000       0x28 ./src/TB_PIT.o
  .debug_macro   0x00000000       0x58 ./src/TB_PIT.o
  .debug_macro   0x00000000     0xb50a ./src/TB_PIT.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .group         0x00000000        0x8 ./src/TB_Mul6804.o
+ .text          0x00000000        0x0 ./src/TB_Mul6804.o
+ .data          0x00000000        0x0 ./src/TB_Mul6804.o
+ .bss           0x00000000        0x0 ./src/TB_Mul6804.o
+ .sbss.wakeupcnt
+                0x00000000        0x1 ./src/TB_Mul6804.o
+ .sdata.ADCWaitTime
+                0x00000000        0x1 ./src/TB_Mul6804.o
+ .bss.tmp.14028
+                0x00000000       0x18 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000      0x616 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x52 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0xa0 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x16 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x64 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000      0x1a3 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000      0x133 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x9d ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x10 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000      0x15b ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x28 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000       0x58 ./src/TB_Mul6804.o
+ .debug_macro   0x00000000     0xb50a ./src/TB_Mul6804.o
+ .debug_macro   0x00000000      0xb62 ./src/TB_Mul6804.o
  .group         0x00000000        0x8 ./src/TB_LTC6804.o
  .group         0x00000000        0x8 ./src/TB_LTC6804.o
  .group         0x00000000        0x8 ./src/TB_LTC6804.o
@@ -246,17 +283,53 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/TB_LTC6804.o
  .data          0x00000000        0x0 ./src/TB_LTC6804.o
  .bss           0x00000000        0x0 ./src/TB_LTC6804.o
+ .sdata.gCommandType
+                0x00000000        0x1 ./src/TB_LTC6804.o
  .sbss.flgDateUpdate
+                0x00000000        0x1 ./src/TB_LTC6804.o
+ .sdata.Waittime
                 0x00000000        0x1 ./src/TB_LTC6804.o
  .sdata.openwire
                 0x00000000        0x1 ./src/TB_LTC6804.o
+ .sbss.SPILINE  0x00000000        0x1 ./src/TB_LTC6804.o
+ .sdata.resettime
+                0x00000000        0x4 ./src/TB_LTC6804.o
  .sbss.wake_up_counts
                 0x00000000        0x1 ./src/TB_LTC6804.o
+ .sbss.sendable
+                0x00000000        0x1 ./src/TB_LTC6804.o
+ .bss.g_SPI_Rx_array
+                0x00000000      0x264 ./src/TB_LTC6804.o
  .data.pec15Table
                 0x00000000      0x200 ./src/TB_LTC6804.o
+ .data.SPIDATA2
+                0x00000000      0x27c ./src/TB_LTC6804.o
+ .data.SPIDATALEN2
+                0x00000000       0x21 ./src/TB_LTC6804.o
  .text.pec15    0x00000000       0xde ./src/TB_LTC6804.o
  .text.SPI_DataRec
                 0x00000000       0x56 ./src/TB_LTC6804.o
+ .text.SPI_DataSend
+                0x00000000       0x74 ./src/TB_LTC6804.o
+ .text.SPI_mid_DataSend
+                0x00000000       0x74 ./src/TB_LTC6804.o
+ .text.DataOrganization
+                0x00000000      0x320 ./src/TB_LTC6804.o
+ .rodata.DataOrganization
+                0x00000000       0x90 ./src/TB_LTC6804.o
+ .text.vol_sample
+                0x00000000      0x75a ./src/TB_LTC6804.o
+ .text.delay_test
+                0x00000000       0x70 ./src/TB_LTC6804.o
+ .bss.i.14051   0x00000000        0x4 ./src/TB_LTC6804.o
+ .bss.temp.14053
+                0x00000000        0x1 ./src/TB_LTC6804.o
+ .bss.rows.14054
+                0x00000000        0x1 ./src/TB_LTC6804.o
+ .bss.num.14052
+                0x00000000        0x4 ./src/TB_LTC6804.o
+ .bss.tmp.14055
+                0x00000000       0x18 ./src/TB_LTC6804.o
  .debug_macro   0x00000000      0x616 ./src/TB_LTC6804.o
  .debug_macro   0x00000000       0x52 ./src/TB_LTC6804.o
  .debug_macro   0x00000000       0xa0 ./src/TB_LTC6804.o
@@ -653,6 +726,7 @@ LOAD ./src/flashrchw.o
 LOAD ./src/Vector.o
 LOAD ./src/TB_UART.o
 LOAD ./src/TB_PIT.o
+LOAD ./src/TB_Mul6804.o
 LOAD ./src/TB_LTC6804.o
 LOAD ./src/TB_GPIO.o
 LOAD ./src/TB_DS1302.o
@@ -726,7 +800,7 @@ LOAD d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib
                 0x01002000      0xb78 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
                 0x01002000                IntcIsrVectorTable
 
-.text           0x01002b80     0x17c0
+.text           0x01002b80     0x15c0
  *(.text.startup)
  *(.text)
  .text          0x01002b80      0x16c d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
@@ -747,290 +821,290 @@ LOAD d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib
                 0x01002e18                PIT0_CH1_ISR
  *fill*         0x01002e8a        0x2 
  .text.PIT0_CH0_ISR
-                0x01002e8c       0x8a ./src/main.o
+                0x01002e8c       0x88 ./src/main.o
                 0x01002e8c                PIT0_CH0_ISR
- *fill*         0x01002f16        0x2 
  .text.UART0_ISR
-                0x01002f18       0x32 ./src/main.o
-                0x01002f18                UART0_ISR
- *fill*         0x01002f4a        0x2 
+                0x01002f14       0x32 ./src/main.o
+                0x01002f14                UART0_ISR
+ *fill*         0x01002f46        0x2 
  .text.UART1_ISR
-                0x01002f4c       0x80 ./src/main.o
-                0x01002f4c                UART1_ISR
+                0x01002f48       0x80 ./src/main.o
+                0x01002f48                UART1_ISR
  .text.SPI_REC_ISR
-                0x01002fcc       0x26 ./src/main.o
-                0x01002fcc                SPI_REC_ISR
- *fill*         0x01002ff2        0x2 
- .text.main     0x01002ff4       0x84 ./src/main.o
-                0x01002ff4                main
+                0x01002fc8       0x26 ./src/main.o
+                0x01002fc8                SPI_REC_ISR
+ *fill*         0x01002fee        0x2 
+ .text.main     0x01002ff0       0x84 ./src/main.o
+                0x01002ff0                main
  .text.delay_test0
-                0x01003078       0x66 ./src/main.o
-                0x01003078                delay_test0
- *fill*         0x010030de        0x2 
- .text.dummy    0x010030e0        0xc ./src/intc_SW_mode_isr_vectors_MPC5744P.o
-                0x010030e0                dummy
+                0x01003074       0x66 ./src/main.o
+                0x01003074                delay_test0
+ *fill*         0x010030da        0x2 
+ .text.dummy    0x010030dc        0xc ./src/intc_SW_mode_isr_vectors_MPC5744P.o
+                0x010030dc                dummy
  .text.PIT0_CH0_Init
-                0x010030ec       0x50 ./src/TB_PIT.o
-                0x010030ec                PIT0_CH0_Init
+                0x010030e8       0x50 ./src/TB_PIT.o
+                0x010030e8                PIT0_CH0_Init
  .text.PIT0_CH1_Init
-                0x0100313c       0x50 ./src/TB_PIT.o
-                0x0100313c                PIT0_CH1_Init
+                0x01003138       0x50 ./src/TB_PIT.o
+                0x01003138                PIT0_CH1_Init
+ .text.delay_testMul
+                0x01003188       0x70 ./src/TB_Mul6804.o
+                0x01003188                delay_testMul
+ .text.SPI_DataSendMul
+                0x010031f8       0x74 ./src/TB_Mul6804.o
+                0x010031f8                SPI_DataSendMul
+ .text.SPI_mid_DataSendMul
+                0x0100326c       0x74 ./src/TB_Mul6804.o
+                0x0100326c                SPI_mid_DataSendMul
+ .text.DataOrganizationMul
+                0x010032e0      0x380 ./src/TB_Mul6804.o
+                0x010032e0                DataOrganizationMul
+ .text.vol_sample_Mul
+                0x01003660      0x4fc ./src/TB_Mul6804.o
+                0x01003660                vol_sample_Mul
  .text.SPI_Pin_Init
-                0x0100318c      0x11a ./src/TB_LTC6804.o
-                0x0100318c                SPI_Pin_Init
- *fill*         0x010032a6        0x2 
+                0x01003b5c      0x11a ./src/TB_LTC6804.o
+                0x01003b5c                SPI_Pin_Init
+ *fill*         0x01003c76        0x2 
  .text.SPI_Init
-                0x010032a8       0x44 ./src/TB_LTC6804.o
-                0x010032a8                SPI_Init
- .text.SPI_DataSend
-                0x010032ec       0x74 ./src/TB_LTC6804.o
-                0x010032ec                SPI_DataSend
- .text.SPI_mid_DataSend
-                0x01003360       0x74 ./src/TB_LTC6804.o
-                0x01003360                SPI_mid_DataSend
- .text.DataOrganization
-                0x010033d4      0x320 ./src/TB_LTC6804.o
-                0x010033d4                DataOrganization
- .text.vol_sample
-                0x010036f4      0x75a ./src/TB_LTC6804.o
-                0x010036f4                vol_sample
- *fill*         0x01003e4e        0x2 
- .text.delay_test
-                0x01003e50       0x70 ./src/TB_LTC6804.o
-                0x01003e50                delay_test
+                0x01003c78       0x44 ./src/TB_LTC6804.o
+                0x01003c78                SPI_Init
  .text.gpio_init
-                0x01003ec0       0xd4 ./src/TB_GPIO.o
-                0x01003ec0                gpio_init
+                0x01003cbc       0xd4 ./src/TB_GPIO.o
+                0x01003cbc                gpio_init
  .text.CAN_Rec_Interrupt
-                0x01003f94       0xce ./src/TB_CAN.o
-                0x01003f94                CAN_Rec_Interrupt
- *fill*         0x01004062        0x2 
+                0x01003d90       0xce ./src/TB_CAN.o
+                0x01003d90                CAN_Rec_Interrupt
+ *fill*         0x01003e5e        0x2 
  .text.SysClk_Init
-                0x01004064      0x140 ./src/SysClk.o
-                0x01004064                SysClk_Init
+                0x01003e60      0x140 ./src/SysClk.o
+                0x01003e60                SysClk_Init
  .text.InitPeriClkGen
-                0x010041a4       0xbc ./src/SysClk.o
-                0x010041a4                InitPeriClkGen
- .text.SetIVPR  0x01004260       0x1a ./src/MPC57xx__Interrupt_Init.o
-                0x01004260                SetIVPR
- *fill*         0x0100427a        0x2 
+                0x01003fa0       0xbc ./src/SysClk.o
+                0x01003fa0                InitPeriClkGen
+ .text.SetIVPR  0x0100405c       0x1a ./src/MPC57xx__Interrupt_Init.o
+                0x0100405c                SetIVPR
+ *fill*         0x01004076        0x2 
  .text.InitINTC
-                0x0100427c       0x32 ./src/MPC57xx__Interrupt_Init.o
-                0x0100427c                InitINTC
- *fill*         0x010042ae        0x2 
+                0x01004078       0x32 ./src/MPC57xx__Interrupt_Init.o
+                0x01004078                InitINTC
+ *fill*         0x010040aa        0x2 
  .text.enableIrq
-                0x010042b0       0x20 ./src/MPC57xx__Interrupt_Init.o
-                0x010042b0                enableIrq
+                0x010040ac       0x20 ./src/MPC57xx__Interrupt_Init.o
+                0x010040ac                enableIrq
  .text.xcptn_xmpl
-                0x010042d0       0x34 ./src/MPC57xx__Interrupt_Init.o
-                0x010042d0                xcptn_xmpl
+                0x010040cc       0x34 ./src/MPC57xx__Interrupt_Init.o
+                0x010040cc                xcptn_xmpl
  *(.init)
- .init          0x01004304        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
-                0x01004304                __init
- .init          0x0100430e        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .init          0x01004312        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
- .init          0x01004316        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+ .init          0x01004100        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+                0x01004100                __init
+ .init          0x0100410a        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .init          0x0100410e        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+ .init          0x01004112        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
  *(.fini)
- .fini          0x01004320        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
-                0x01004320                __fini
- .fini          0x0100432a        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .fini          0x0100432e        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
-                0x01004340                . = ALIGN (0x10)
- *fill*         0x01004338        0x8 
+ .fini          0x0100411c        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+                0x0100411c                __fini
+ .fini          0x01004126        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .fini          0x0100412a        0xa d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+                0x01004140                . = ALIGN (0x10)
+ *fill*         0x01004134        0xc 
 
-.glink          0x01004340        0x0
- .glink         0x01004340        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+.glink          0x01004140        0x0
+ .glink         0x01004140        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
 
-.ctors          0x01004340        0x8
-                0x01004340                __CTOR_LIST__ = .
+.ctors          0x01004140        0x8
+                0x01004140                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
- .ctors         0x01004340        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .ctors         0x01004140        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
- .ctors         0x01004344        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
- .ctors         0x01004344        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+ .ctors         0x01004144        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+ .ctors         0x01004144        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
  *(SORT(.ctors.*))
  *(.ctors)
- .ctors         0x01004344        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
-                0x01004348                __CTOR_END__ = .
+ .ctors         0x01004144        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+                0x01004148                __CTOR_END__ = .
 
-.dtors          0x01004348        0x8
-                0x01004348                __DTOR_LIST__ = .
+.dtors          0x01004148        0x8
+                0x01004148                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
- .dtors         0x01004348        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .dtors         0x01004148        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
- .dtors         0x0100434c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
- .dtors         0x0100434c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+ .dtors         0x0100414c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+ .dtors         0x0100414c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
  *(SORT(.dtors.*))
  *(.dtors)
- .dtors         0x0100434c        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
-                0x01004350                __DTOR_END__ = .
+ .dtors         0x0100414c        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+                0x01004150                __DTOR_END__ = .
 
-.preinit_array  0x01004350        0x0
+.preinit_array  0x01004150        0x0
                 [!provide]                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
                 [!provide]                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x01004350        0x0
+.init_array     0x01004150        0x0
                 [!provide]                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
                 [!provide]                PROVIDE (__init_array_end, .)
 
-.fini_array     0x01004350        0x0
+.fini_array     0x01004150        0x0
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
                 [!provide]                PROVIDE (__fini_array_end, .)
 
-.rodata         0x01004350       0x90
+.rodata         0x01004150      0x12c
  *(.rodata)
  *(.rodata.*)
- .rodata.DataOrganization
-                0x01004350       0x90 ./src/TB_LTC6804.o
+ .rodata.DataOrganizationMul
+                0x01004150      0x12c ./src/TB_Mul6804.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x010043e0        0x8
+.eh_frame       0x0100427c        0x8
  *(.eh_frame)
- .eh_frame      0x010043e0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
-                0x010043e0                __EH_FRAME_BEGIN__
- .eh_frame      0x010043e0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .eh_frame      0x010043e0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .eh_frame      0x010043e0        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
- .eh_frame      0x010043e4        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
-                0x010043e4                __EH_FRAME_END__
+ .eh_frame      0x0100427c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+                0x0100427c                __EH_FRAME_BEGIN__
+ .eh_frame      0x0100427c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .eh_frame      0x0100427c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .eh_frame      0x0100427c        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+ .eh_frame      0x01004280        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+                0x01004280                __EH_FRAME_END__
 
-.data           0x40000000      0x2a1 load address 0x010043e8
+.data           0x40000000      0x36b load address 0x01004284
  *(.data)
  .data          0x40000000        0x4 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp\libgcc.a(eabivle.o)
  *(.data.*)
- .data.SPIDATA2
-                0x40000004      0x27c ./src/TB_LTC6804.o
-                0x40000004                SPIDATA2
- .data.SPIDATALEN2
-                0x40000280       0x21 ./src/TB_LTC6804.o
-                0x40000280                SPIDATALEN2
+ .data.SPIDATA2Mul
+                0x40000004      0x324 ./src/TB_Mul6804.o
+                0x40000004                SPIDATA2Mul
+ .data.SPIDATALEN2Mul
+                0x40000328       0x43 ./src/TB_Mul6804.o
+                0x40000328                SPIDATALEN2Mul
 
-.jcr            0x400002a4        0x0 load address 0x01004689
- .jcr           0x400002a4        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+.jcr            0x4000036c        0x0 load address 0x010045ef
+ .jcr           0x4000036c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
 
 .tm_clone_table
-                0x400002a4        0x0 load address 0x01004689
+                0x4000036c        0x0 load address 0x010045ef
  .tm_clone_table
-                0x400002a4        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x4000036c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .tm_clone_table
-                0x400002a4        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+                0x4000036c        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
 
-.got2           0x400002a4       0x1c load address 0x01004689
- .got2          0x400002a4       0x1c d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp\libgcc.a(eabivle.o)
+.got2           0x4000036c       0x1c load address 0x010045ef
+ .got2          0x4000036c       0x1c d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp\libgcc.a(eabivle.o)
 
-.sdata2         0x400002c0        0x0 load address 0x010046a5
+.sdata2         0x40000388        0x0 load address 0x0100460b
  *(.sdata2)
- .sdata2        0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
- .sdata2        0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .sdata2        0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+ .sdata2        0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  *(.sdata2.*)
 
-.sbss2          0x400002c0        0x0 load address 0x010046a5
+.sbss2          0x40000388        0x0 load address 0x0100460b
  *(.sbss2)
- .sbss2         0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+ .sbss2         0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
  *(.sbss2.*)
 
-.rela.dyn       0x400002c0        0x0 load address 0x010046a5
- .rela.iplt     0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .rela.text     0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+.rela.dyn       0x40000388        0x0 load address 0x0100460b
+ .rela.iplt     0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .rela.text     0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.CAN0_Rec_ISR
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.UART1_ISR
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.UART0_Init
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.UART0_Send
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.UART1_Init
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.UART1_Send
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.pec15
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.DS1302_Read
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  .rela.text.CAN_Rec_LoopBack
-                0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .rela.got2     0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .rela.got2     0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
 
-.sdata          0x400002c0       0x10 load address 0x010046a5
+.sdata          0x40000388       0x10 load address 0x0100460b
  *(.sdata)
- .sdata         0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
-                0x400002c0                __SDATA_START__
- .sdata         0x400002c0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
-                0x400082c0                _SDA_BASE_
+ .sdata         0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrti.o
+                0x40000388                __SDATA_START__
+ .sdata         0x40000388        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+                0x40008388                _SDA_BASE_
  *(.sdata.*)
  .sdata.Rx_Buff
-                0x400002c0        0x8 ./src/main.o
-                0x400002c0                Rx_Buff
- .sdata.gCommandType
-                0x400002c8        0x1 ./src/TB_LTC6804.o
-                0x400002c8                gCommandType
- .sdata.Waittime
-                0x400002c9        0x1 ./src/TB_LTC6804.o
-                0x400002c9                Waittime
- *fill*         0x400002ca        0x2 
- .sdata.resettime
-                0x400002cc        0x4 ./src/TB_LTC6804.o
-                0x400002cc                resettime
+                0x40000388        0x8 ./src/main.o
+                0x40000388                Rx_Buff
+ .sdata.SPI_TransmitEnd
+                0x40000390        0x1 ./src/TB_Mul6804.o
+                0x40000390                SPI_TransmitEnd
+ .sdata.gCommandTypeMul
+                0x40000391        0x1 ./src/TB_Mul6804.o
+                0x40000391                gCommandTypeMul
+ .sdata.WaitTime
+                0x40000392        0x1 ./src/TB_Mul6804.o
+                0x40000392                WaitTime
+ *fill*         0x40000393        0x1 
+ .sdata.ResetTime
+                0x40000394        0x4 ./src/TB_Mul6804.o
+                0x40000394                ResetTime
 
-.bss            0x400002d0      0x32b load address 0x010046b5
-                0x400002d0                __BSS_START = .
+.bss            0x40000398      0x313 load address 0x0100461b
+                0x40000398                __BSS_START = .
  *(.sbss)
- .sbss          0x400002d0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
- .sbss          0x400002d0        0xc ./src/main.o
-                0x400002d0                R_ID
-                0x400002d4                R_CODE
-                0x400002d8                R_Length
- .sbss          0x400002dc        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
-                0x400002dc                __SBSS_END__
+ .sbss          0x40000398        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ .sbss          0x40000398        0xc ./src/main.o
+                0x40000398                R_ID
+                0x4000039c                R_CODE
+                0x400003a0                R_Length
+ .sbss          0x400003a4        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+                0x400003a4                __SBSS_END__
  *(.sbss.*)
- .sbss.SPILINE  0x400002dc        0x1 ./src/TB_LTC6804.o
-                0x400002dc                SPILINE
- .sbss.sendable
-                0x400002dd        0x1 ./src/TB_LTC6804.o
-                0x400002dd                sendable
+ .sbss.sendenable
+                0x400003a4        0x1 ./src/TB_Mul6804.o
+                0x400003a4                sendenable
+ .sbss.SPILINEMul
+                0x400003a5        0x1 ./src/TB_Mul6804.o
+                0x400003a5                SPILINEMul
  *(.bss)
- *fill*         0x400002de        0x2 
- .bss           0x400002e0       0x20 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+ *fill*         0x400003a6        0x2 
+ .bss           0x400003a8       0x20 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
  *(.bss.*)
- .bss.CellVol   0x40000300       0x60 ./src/main.o
-                0x40000300                CellVol
- .bss.flag.14087
-                0x40000360        0x1 ./src/main.o
- .bss.flag.14090
-                0x40000361        0x1 ./src/main.o
- .bss.Index.14097
-                0x40000362        0x1 ./src/main.o
- .bss.g_SPI_Rx_array
-                0x40000363      0x264 ./src/TB_LTC6804.o
-                0x40000363                g_SPI_Rx_array
- *fill*         0x400005c7        0x1 
- .bss.i.14051   0x400005c8        0x4 ./src/TB_LTC6804.o
- .bss.temp.14053
-                0x400005cc        0x1 ./src/TB_LTC6804.o
- .bss.rows.14054
-                0x400005cd        0x1 ./src/TB_LTC6804.o
- *fill*         0x400005ce        0x2 
- .bss.num.14052
-                0x400005d0        0x4 ./src/TB_LTC6804.o
- .bss.tmp.14055
-                0x400005d4       0x18 ./src/TB_LTC6804.o
+ .bss.CellVol   0x400003c8       0x60 ./src/main.o
+                0x400003c8                CellVol
+ .bss.flag.14089
+                0x40000428        0x1 ./src/main.o
+ .bss.flag.14092
+                0x40000429        0x1 ./src/main.o
+ .bss.Index.14099
+                0x4000042a        0x1 ./src/main.o
+ .bss.g_SPI_Rx_arrayMul
+                0x4000042b      0x264 ./src/TB_Mul6804.o
+                0x4000042b                g_SPI_Rx_arrayMul
+ *fill*         0x4000068f        0x1 
+ .bss.i.14024   0x40000690        0x4 ./src/TB_Mul6804.o
+ .bss.temp.14026
+                0x40000694        0x1 ./src/TB_Mul6804.o
+ .bss.rows.14027
+                0x40000695        0x1 ./src/TB_Mul6804.o
+ *fill*         0x40000696        0x2 
+ .bss.num.14025
+                0x40000698        0x4 ./src/TB_Mul6804.o
  *(COMMON)
- COMMON         0x400005ec        0xf ./src/main.o
-                0x400005ec                DataRec_485
-                0x400005fb                __BSS_END = .
+ COMMON         0x4000069c        0xf ./src/main.o
+                0x4000069c                DataRec_485
+                0x400006ab                __BSS_END = .
 
-.iplt           0x40000600        0x0 load address 0x010046b5
- .iplt          0x40000600        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
+.iplt           0x400006b0        0x0 load address 0x0100461b
+ .iplt          0x400006b0        0x0 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtbegin.o
 
 .stack          0x50800000     0x1004
                 0x50800000                __HEAP = .
@@ -1046,16 +1120,16 @@ LOAD d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib
                 0x50801004                . = (. + 0x4)
  *fill*         0x50801000        0x4 
                 0x40000000                __DATA_SRAM_ADDR = ADDR (.data)
-                0x400002c0                __SDATA_SRAM_ADDR = ADDR (.sdata)
-                0x000002a1                __DATA_SIZE = SIZEOF (.data)
+                0x40000388                __SDATA_SRAM_ADDR = ADDR (.sdata)
+                0x0000036b                __DATA_SIZE = SIZEOF (.data)
                 0x00000010                __SDATA_SIZE = SIZEOF (.sdata)
-                0x010043e8                __DATA_ROM_ADDR = LOADADDR (.data)
-                0x010046a5                __SDATA_ROM_ADDR = LOADADDR (.sdata)
+                0x01004284                __DATA_ROM_ADDR = LOADADDR (.data)
+                0x0100460b                __SDATA_ROM_ADDR = LOADADDR (.sdata)
                 0x00060000                __SRAM_SIZE = SRAM_SIZE
                 0x40000000                __SRAM_BASE_ADDR = SRAM_BASE_ADDR
                 0x00010000                __LOCAL_DMEM_SIZE = LOCALDMEM_SIZE
                 0x50800000                __LOCAL_DMEM_BASE_ADDR = LOCALDMEM_BASE_ADDR
-                0x0000032b                __BSS_SIZE = (__BSS_END - __BSS_START)
+                0x00000313                __BSS_SIZE = (__BSS_END - __BSS_START)
 OUTPUT(TestBorad.elf elf32-powerpc)
 
 .PPC.EMB.apuinfo
@@ -1079,31 +1153,33 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .PPC.EMB.apuinfo
                 0x000000c0       0x18 ./src/TB_PIT.o
  .PPC.EMB.apuinfo
-                0x000000d8       0x18 ./src/TB_LTC6804.o
+                0x000000d8       0x18 ./src/TB_Mul6804.o
  .PPC.EMB.apuinfo
-                0x000000f0       0x18 ./src/TB_GPIO.o
+                0x000000f0       0x18 ./src/TB_LTC6804.o
  .PPC.EMB.apuinfo
-                0x00000108       0x18 ./src/TB_DS1302.o
+                0x00000108       0x18 ./src/TB_GPIO.o
  .PPC.EMB.apuinfo
-                0x00000120       0x18 ./src/TB_CAN.o
+                0x00000120       0x18 ./src/TB_DS1302.o
  .PPC.EMB.apuinfo
-                0x00000138       0x18 ./src/TB_AnSPI.o
+                0x00000138       0x18 ./src/TB_CAN.o
  .PPC.EMB.apuinfo
-                0x00000150       0x18 ./src/TB_ADC.o
+                0x00000150       0x18 ./src/TB_AnSPI.o
  .PPC.EMB.apuinfo
-                0x00000168       0x18 ./src/TB_25LC256.o
+                0x00000168       0x18 ./src/TB_ADC.o
  .PPC.EMB.apuinfo
-                0x00000180       0x18 ./src/SysClk.o
+                0x00000180       0x18 ./src/TB_25LC256.o
  .PPC.EMB.apuinfo
-                0x00000198       0x18 ./src/MPC57xx__Interrupt_Init.o
+                0x00000198       0x18 ./src/SysClk.o
  .PPC.EMB.apuinfo
-                0x000001b0       0x18 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+                0x000001b0       0x18 ./src/MPC57xx__Interrupt_Init.o
  .PPC.EMB.apuinfo
-                0x000001c8       0x18 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp\libgcc.a(eabivle.o)
+                0x000001c8       0x18 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
  .PPC.EMB.apuinfo
-                0x000001e0       0x18 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+                0x000001e0       0x18 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp\libgcc.a(eabivle.o)
  .PPC.EMB.apuinfo
-                0x000001f8       0x18 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
+                0x000001f8       0x18 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/crtend.o
+ .PPC.EMB.apuinfo
+                0x00000210       0x18 d:/software/nxp/s32ds_power_v1.2/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/e200z4/fp/ecrtn.o
 
 .comment        0x00000000       0x8e
  .comment       0x00000000       0x8e ./src/main.o
@@ -1113,6 +1189,7 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .comment       0x0000008e       0x8f ./src/Vector.o
  .comment       0x0000008e       0x8f ./src/TB_UART.o
  .comment       0x0000008e       0x8f ./src/TB_PIT.o
+ .comment       0x0000008e       0x8f ./src/TB_Mul6804.o
  .comment       0x0000008e       0x8f ./src/TB_LTC6804.o
  .comment       0x0000008e       0x8f ./src/TB_GPIO.o
  .comment       0x0000008e       0x8f ./src/TB_DS1302.o
@@ -1124,27 +1201,28 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .comment       0x0000008e       0x8f ./src/MPC57xx__Interrupt_Init.o
  .comment       0x0000008e       0x8f D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_line     0x00000000     0x2afe
+.debug_line     0x00000000     0x2e25
  .debug_line    0x00000000       0xdb ./Project_Settings/Startup_Code/startup.o
- .debug_line    0x000000db      0x331 ./src/main.o
- .debug_line    0x0000040c       0x5d ./src/intc_sw_handlers.o
- .debug_line    0x00000469      0x1e5 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
- .debug_line    0x0000064e      0x1b8 ./src/flashrchw.o
- .debug_line    0x00000806       0xe6 ./src/Vector.o
- .debug_line    0x000008ec      0x334 ./src/TB_UART.o
- .debug_line    0x00000c20      0x1f7 ./src/TB_PIT.o
- .debug_line    0x00000e17      0x395 ./src/TB_LTC6804.o
- .debug_line    0x000011ac      0x21c ./src/TB_GPIO.o
- .debug_line    0x000013c8      0x36b ./src/TB_DS1302.o
- .debug_line    0x00001733      0x2c0 ./src/TB_CAN.o
- .debug_line    0x000019f3      0x55a ./src/TB_AnSPI.o
- .debug_line    0x00001f4d      0x28d ./src/TB_ADC.o
- .debug_line    0x000021da      0x427 ./src/TB_25LC256.o
- .debug_line    0x00002601      0x22d ./src/SysClk.o
- .debug_line    0x0000282e      0x248 ./src/MPC57xx__Interrupt_Init.o
- .debug_line    0x00002a76       0x88 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_line    0x000000db      0x341 ./src/main.o
+ .debug_line    0x0000041c       0x5d ./src/intc_sw_handlers.o
+ .debug_line    0x00000479      0x1e5 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
+ .debug_line    0x0000065e      0x1b8 ./src/flashrchw.o
+ .debug_line    0x00000816       0xe6 ./src/Vector.o
+ .debug_line    0x000008fc      0x334 ./src/TB_UART.o
+ .debug_line    0x00000c30      0x1f7 ./src/TB_PIT.o
+ .debug_line    0x00000e27      0x317 ./src/TB_Mul6804.o
+ .debug_line    0x0000113e      0x395 ./src/TB_LTC6804.o
+ .debug_line    0x000014d3      0x21c ./src/TB_GPIO.o
+ .debug_line    0x000016ef      0x36b ./src/TB_DS1302.o
+ .debug_line    0x00001a5a      0x2c0 ./src/TB_CAN.o
+ .debug_line    0x00001d1a      0x55a ./src/TB_AnSPI.o
+ .debug_line    0x00002274      0x28d ./src/TB_ADC.o
+ .debug_line    0x00002501      0x427 ./src/TB_25LC256.o
+ .debug_line    0x00002928      0x22d ./src/SysClk.o
+ .debug_line    0x00002b55      0x248 ./src/MPC57xx__Interrupt_Init.o
+ .debug_line    0x00002d9d       0x88 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_info     0x00000000    0x1a0a5
+.debug_info     0x00000000    0x1bfd2
  .debug_info    0x00000000       0x7e ./Project_Settings/Startup_Code/startup.o
  .debug_info    0x0000007e     0x4151 ./src/main.o
  .debug_info    0x000041cf       0x6d ./src/intc_sw_handlers.o
@@ -1153,18 +1231,19 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_info    0x00004383       0x21 ./src/Vector.o
  .debug_info    0x000043a4     0x29de ./src/TB_UART.o
  .debug_info    0x00006d82      0x8aa ./src/TB_PIT.o
- .debug_info    0x0000762c     0x2040 ./src/TB_LTC6804.o
- .debug_info    0x0000966c     0x152e ./src/TB_GPIO.o
- .debug_info    0x0000ab9a     0x1691 ./src/TB_DS1302.o
- .debug_info    0x0000c22b     0x2b97 ./src/TB_CAN.o
- .debug_info    0x0000edc2     0x17af ./src/TB_AnSPI.o
- .debug_info    0x00010571     0x3d11 ./src/TB_ADC.o
- .debug_info    0x00014282     0x1ed6 ./src/TB_25LC256.o
- .debug_info    0x00016158     0x3872 ./src/SysClk.o
- .debug_info    0x000199ca      0x5eb ./src/MPC57xx__Interrupt_Init.o
- .debug_info    0x00019fb5       0xf0 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_info    0x0000762c     0x1f2d ./src/TB_Mul6804.o
+ .debug_info    0x00009559     0x2040 ./src/TB_LTC6804.o
+ .debug_info    0x0000b599     0x152e ./src/TB_GPIO.o
+ .debug_info    0x0000cac7     0x1691 ./src/TB_DS1302.o
+ .debug_info    0x0000e158     0x2b97 ./src/TB_CAN.o
+ .debug_info    0x00010cef     0x17af ./src/TB_AnSPI.o
+ .debug_info    0x0001249e     0x3d11 ./src/TB_ADC.o
+ .debug_info    0x000161af     0x1ed6 ./src/TB_25LC256.o
+ .debug_info    0x00018085     0x3872 ./src/SysClk.o
+ .debug_info    0x0001b8f7      0x5eb ./src/MPC57xx__Interrupt_Init.o
+ .debug_info    0x0001bee2       0xf0 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_abbrev   0x00000000     0x150e
+.debug_abbrev   0x00000000     0x171b
  .debug_abbrev  0x00000000       0x14 ./Project_Settings/Startup_Code/startup.o
  .debug_abbrev  0x00000014      0x1dd ./src/main.o
  .debug_abbrev  0x000001f1       0x14 ./src/intc_sw_handlers.o
@@ -1173,18 +1252,19 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_abbrev  0x000002cf       0x13 ./src/Vector.o
  .debug_abbrev  0x000002e2      0x1a9 ./src/TB_UART.o
  .debug_abbrev  0x0000048b      0x148 ./src/TB_PIT.o
- .debug_abbrev  0x000005d3      0x261 ./src/TB_LTC6804.o
- .debug_abbrev  0x00000834      0x12f ./src/TB_GPIO.o
- .debug_abbrev  0x00000963      0x1cc ./src/TB_DS1302.o
- .debug_abbrev  0x00000b2f      0x198 ./src/TB_CAN.o
- .debug_abbrev  0x00000cc7      0x1e8 ./src/TB_AnSPI.o
- .debug_abbrev  0x00000eaf      0x15e ./src/TB_ADC.o
- .debug_abbrev  0x0000100d      0x1d5 ./src/TB_25LC256.o
- .debug_abbrev  0x000011e2      0x12e ./src/SysClk.o
- .debug_abbrev  0x00001310      0x17d ./src/MPC57xx__Interrupt_Init.o
- .debug_abbrev  0x0000148d       0x81 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_abbrev  0x000005d3      0x20d ./src/TB_Mul6804.o
+ .debug_abbrev  0x000007e0      0x261 ./src/TB_LTC6804.o
+ .debug_abbrev  0x00000a41      0x12f ./src/TB_GPIO.o
+ .debug_abbrev  0x00000b70      0x1cc ./src/TB_DS1302.o
+ .debug_abbrev  0x00000d3c      0x198 ./src/TB_CAN.o
+ .debug_abbrev  0x00000ed4      0x1e8 ./src/TB_AnSPI.o
+ .debug_abbrev  0x000010bc      0x15e ./src/TB_ADC.o
+ .debug_abbrev  0x0000121a      0x1d5 ./src/TB_25LC256.o
+ .debug_abbrev  0x000013ef      0x12e ./src/SysClk.o
+ .debug_abbrev  0x0000151d      0x17d ./src/MPC57xx__Interrupt_Init.o
+ .debug_abbrev  0x0000169a       0x81 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_aranges  0x00000000      0x410
+.debug_aranges  0x00000000      0x450
  .debug_aranges
                 0x00000000       0x20 ./Project_Settings/Startup_Code/startup.o
  .debug_aranges
@@ -1202,134 +1282,141 @@ OUTPUT(TestBorad.elf elf32-powerpc)
  .debug_aranges
                 0x00000140       0x28 ./src/TB_PIT.o
  .debug_aranges
-                0x00000168       0x60 ./src/TB_LTC6804.o
+                0x00000168       0x40 ./src/TB_Mul6804.o
  .debug_aranges
-                0x000001c8       0x30 ./src/TB_GPIO.o
+                0x000001a8       0x60 ./src/TB_LTC6804.o
  .debug_aranges
-                0x000001f8       0x50 ./src/TB_DS1302.o
+                0x00000208       0x30 ./src/TB_GPIO.o
  .debug_aranges
-                0x00000248       0x40 ./src/TB_CAN.o
+                0x00000238       0x50 ./src/TB_DS1302.o
  .debug_aranges
-                0x00000288       0x58 ./src/TB_AnSPI.o
+                0x00000288       0x40 ./src/TB_CAN.o
  .debug_aranges
-                0x000002e0       0x50 ./src/TB_ADC.o
+                0x000002c8       0x58 ./src/TB_AnSPI.o
  .debug_aranges
-                0x00000330       0x60 ./src/TB_25LC256.o
+                0x00000320       0x50 ./src/TB_ADC.o
  .debug_aranges
-                0x00000390       0x28 ./src/SysClk.o
+                0x00000370       0x60 ./src/TB_25LC256.o
  .debug_aranges
-                0x000003b8       0x38 ./src/MPC57xx__Interrupt_Init.o
+                0x000003d0       0x28 ./src/SysClk.o
  .debug_aranges
-                0x000003f0       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+                0x000003f8       0x38 ./src/MPC57xx__Interrupt_Init.o
+ .debug_aranges
+                0x00000430       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_ranges   0x00000000      0x2c0
+.debug_ranges   0x00000000      0x2f0
  .debug_ranges  0x00000000       0x48 ./src/main.o
  .debug_ranges  0x00000048       0x10 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
  .debug_ranges  0x00000058       0x48 ./src/TB_UART.o
  .debug_ranges  0x000000a0       0x18 ./src/TB_PIT.o
- .debug_ranges  0x000000b8       0x50 ./src/TB_LTC6804.o
- .debug_ranges  0x00000108       0x20 ./src/TB_GPIO.o
- .debug_ranges  0x00000128       0x40 ./src/TB_DS1302.o
- .debug_ranges  0x00000168       0x30 ./src/TB_CAN.o
- .debug_ranges  0x00000198       0x48 ./src/TB_AnSPI.o
- .debug_ranges  0x000001e0       0x40 ./src/TB_ADC.o
- .debug_ranges  0x00000220       0x50 ./src/TB_25LC256.o
- .debug_ranges  0x00000270       0x18 ./src/SysClk.o
- .debug_ranges  0x00000288       0x28 ./src/MPC57xx__Interrupt_Init.o
- .debug_ranges  0x000002b0       0x10 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_ranges  0x000000b8       0x30 ./src/TB_Mul6804.o
+ .debug_ranges  0x000000e8       0x50 ./src/TB_LTC6804.o
+ .debug_ranges  0x00000138       0x20 ./src/TB_GPIO.o
+ .debug_ranges  0x00000158       0x40 ./src/TB_DS1302.o
+ .debug_ranges  0x00000198       0x30 ./src/TB_CAN.o
+ .debug_ranges  0x000001c8       0x48 ./src/TB_AnSPI.o
+ .debug_ranges  0x00000210       0x40 ./src/TB_ADC.o
+ .debug_ranges  0x00000250       0x50 ./src/TB_25LC256.o
+ .debug_ranges  0x000002a0       0x18 ./src/SysClk.o
+ .debug_ranges  0x000002b8       0x28 ./src/MPC57xx__Interrupt_Init.o
+ .debug_ranges  0x000002e0       0x10 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
-.debug_macro    0x00000000     0xdc37
- .debug_macro   0x00000000      0x160 ./src/main.o
- .debug_macro   0x00000160      0x616 ./src/main.o
- .debug_macro   0x00000776       0x52 ./src/main.o
- .debug_macro   0x000007c8       0xa0 ./src/main.o
- .debug_macro   0x00000868       0x16 ./src/main.o
- .debug_macro   0x0000087e       0x64 ./src/main.o
- .debug_macro   0x000008e2      0x1a3 ./src/main.o
- .debug_macro   0x00000a85      0x133 ./src/main.o
- .debug_macro   0x00000bb8       0x9d ./src/main.o
- .debug_macro   0x00000c55       0x10 ./src/main.o
- .debug_macro   0x00000c65      0x15b ./src/main.o
- .debug_macro   0x00000dc0       0x28 ./src/main.o
- .debug_macro   0x00000de8       0x58 ./src/main.o
- .debug_macro   0x00000e40     0xb50a ./src/main.o
- .debug_macro   0x0000c34a      0xb62 ./src/main.o
- .debug_macro   0x0000ceac       0x70 ./src/main.o
- .debug_macro   0x0000cf1c       0x22 ./src/main.o
- .debug_macro   0x0000cf3e       0x58 ./src/main.o
- .debug_macro   0x0000cf96       0x2e ./src/main.o
- .debug_macro   0x0000cfc4       0x2e ./src/main.o
- .debug_macro   0x0000cff2       0x1c ./src/main.o
- .debug_macro   0x0000d00e       0xdc ./src/main.o
- .debug_macro   0x0000d0ea       0xa1 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
- .debug_macro   0x0000d18b       0xd1 ./src/flashrchw.o
- .debug_macro   0x0000d25c       0x41 ./src/Vector.o
- .debug_macro   0x0000d29d       0x2e ./src/Vector.o
- .debug_macro   0x0000d2cb      0x107 ./src/TB_UART.o
- .debug_macro   0x0000d3d2       0x16 ./src/TB_UART.o
- .debug_macro   0x0000d3e8       0x16 ./src/TB_UART.o
- .debug_macro   0x0000d3fe       0x10 ./src/TB_UART.o
- .debug_macro   0x0000d40e       0xc1 ./src/TB_PIT.o
- .debug_macro   0x0000d4cf       0x1c ./src/TB_PIT.o
- .debug_macro   0x0000d4eb       0xca ./src/TB_LTC6804.o
- .debug_macro   0x0000d5b5       0xca ./src/TB_GPIO.o
- .debug_macro   0x0000d67f       0xca ./src/TB_DS1302.o
- .debug_macro   0x0000d749       0xca ./src/TB_CAN.o
- .debug_macro   0x0000d813       0xca ./src/TB_AnSPI.o
- .debug_macro   0x0000d8dd       0xcb ./src/TB_ADC.o
- .debug_macro   0x0000d9a8      0x102 ./src/TB_25LC256.o
- .debug_macro   0x0000daaa       0xbc ./src/SysClk.o
- .debug_macro   0x0000db66       0xd1 ./src/MPC57xx__Interrupt_Init.o
+.debug_macro    0x00000000     0xdeb4
+ .debug_macro   0x00000000      0x16e ./src/main.o
+ .debug_macro   0x0000016e      0x616 ./src/main.o
+ .debug_macro   0x00000784       0x52 ./src/main.o
+ .debug_macro   0x000007d6       0xa0 ./src/main.o
+ .debug_macro   0x00000876       0x16 ./src/main.o
+ .debug_macro   0x0000088c       0x64 ./src/main.o
+ .debug_macro   0x000008f0      0x1a3 ./src/main.o
+ .debug_macro   0x00000a93      0x133 ./src/main.o
+ .debug_macro   0x00000bc6       0x9d ./src/main.o
+ .debug_macro   0x00000c63       0x10 ./src/main.o
+ .debug_macro   0x00000c73      0x15b ./src/main.o
+ .debug_macro   0x00000dce       0x28 ./src/main.o
+ .debug_macro   0x00000df6       0x58 ./src/main.o
+ .debug_macro   0x00000e4e     0xb50a ./src/main.o
+ .debug_macro   0x0000c358      0xb62 ./src/main.o
+ .debug_macro   0x0000ceba       0x70 ./src/main.o
+ .debug_macro   0x0000cf2a       0x22 ./src/main.o
+ .debug_macro   0x0000cf4c       0x58 ./src/main.o
+ .debug_macro   0x0000cfa4       0x2e ./src/main.o
+ .debug_macro   0x0000cfd2       0x2e ./src/main.o
+ .debug_macro   0x0000d000       0x1c ./src/main.o
+ .debug_macro   0x0000d01c       0xdc ./src/main.o
+ .debug_macro   0x0000d0f8       0xa1 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
+ .debug_macro   0x0000d199       0xd1 ./src/flashrchw.o
+ .debug_macro   0x0000d26a       0x41 ./src/Vector.o
+ .debug_macro   0x0000d2ab       0x2e ./src/Vector.o
+ .debug_macro   0x0000d2d9      0x107 ./src/TB_UART.o
+ .debug_macro   0x0000d3e0       0x16 ./src/TB_UART.o
+ .debug_macro   0x0000d3f6       0x16 ./src/TB_UART.o
+ .debug_macro   0x0000d40c       0x10 ./src/TB_UART.o
+ .debug_macro   0x0000d41c       0xc1 ./src/TB_PIT.o
+ .debug_macro   0x0000d4dd       0x1c ./src/TB_PIT.o
+ .debug_macro   0x0000d4f9      0x26f ./src/TB_Mul6804.o
+ .debug_macro   0x0000d768       0xca ./src/TB_LTC6804.o
+ .debug_macro   0x0000d832       0xca ./src/TB_GPIO.o
+ .debug_macro   0x0000d8fc       0xca ./src/TB_DS1302.o
+ .debug_macro   0x0000d9c6       0xca ./src/TB_CAN.o
+ .debug_macro   0x0000da90       0xca ./src/TB_AnSPI.o
+ .debug_macro   0x0000db5a       0xcb ./src/TB_ADC.o
+ .debug_macro   0x0000dc25      0x102 ./src/TB_25LC256.o
+ .debug_macro   0x0000dd27       0xbc ./src/SysClk.o
+ .debug_macro   0x0000dde3       0xd1 ./src/MPC57xx__Interrupt_Init.o
 
-.debug_str      0x00000000    0x3e1e8
- .debug_str     0x00000000    0x3a7f7 ./src/main.o
-                              0x3a8fb (size before relaxing)
- .debug_str     0x0003a7f7       0x44 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
+.debug_str      0x00000000    0x3e652
+ .debug_str     0x00000000    0x3a806 ./src/main.o
+                              0x3a90a (size before relaxing)
+ .debug_str     0x0003a806       0x44 ./src/intc_SW_mode_isr_vectors_MPC5744P.o
                                0x3a51 (size before relaxing)
- .debug_str     0x0003a83b       0xe1 ./src/flashrchw.o
+ .debug_str     0x0003a84a       0xe1 ./src/flashrchw.o
                                0x3ae5 (size before relaxing)
- .debug_str     0x0003a91c      0x185 ./src/Vector.o
+ .debug_str     0x0003a92b      0x185 ./src/Vector.o
                                0x24a5 (size before relaxing)
- .debug_str     0x0003aaa1      0x3d6 ./src/TB_UART.o
+ .debug_str     0x0003aab0      0x3d6 ./src/TB_UART.o
                               0x396ec (size before relaxing)
- .debug_str     0x0003ae77       0x2c ./src/TB_PIT.o
+ .debug_str     0x0003ae86       0x2c ./src/TB_PIT.o
                               0x3773c (size before relaxing)
- .debug_str     0x0003aea3      0x15b ./src/TB_LTC6804.o
+ .debug_str     0x0003aeb2      0x474 ./src/TB_Mul6804.o
+                              0x39434 (size before relaxing)
+ .debug_str     0x0003b326      0x142 ./src/TB_LTC6804.o
                               0x392aa (size before relaxing)
- .debug_str     0x0003affe       0x2e ./src/TB_GPIO.o
+ .debug_str     0x0003b468       0x2e ./src/TB_GPIO.o
                               0x38e2e (size before relaxing)
- .debug_str     0x0003b02c       0x9d ./src/TB_DS1302.o
+ .debug_str     0x0003b496       0x9d ./src/TB_DS1302.o
                               0x38db9 (size before relaxing)
- .debug_str     0x0003b0c9       0xb9 ./src/TB_CAN.o
+ .debug_str     0x0003b533       0xb9 ./src/TB_CAN.o
                               0x397f5 (size before relaxing)
- .debug_str     0x0003b182       0x9c ./src/TB_AnSPI.o
+ .debug_str     0x0003b5ec       0x9c ./src/TB_AnSPI.o
                               0x38da8 (size before relaxing)
- .debug_str     0x0003b21e     0x1168 ./src/TB_ADC.o
+ .debug_str     0x0003b688     0x1168 ./src/TB_ADC.o
                               0x39edd (size before relaxing)
- .debug_str     0x0003c386       0xcf ./src/TB_25LC256.o
+ .debug_str     0x0003c7f0       0xcf ./src/TB_25LC256.o
                               0x39169 (size before relaxing)
- .debug_str     0x0003c455     0x1af7 ./src/SysClk.o
+ .debug_str     0x0003c8bf     0x1af7 ./src/SysClk.o
                               0x38d93 (size before relaxing)
- .debug_str     0x0003df4c       0xb9 ./src/MPC57xx__Interrupt_Init.o
+ .debug_str     0x0003e3b6       0xb9 ./src/MPC57xx__Interrupt_Init.o
                               0x376ad (size before relaxing)
- .debug_str     0x0003e005      0x1e3 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_str     0x0003e46f      0x1e3 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
                                 0x281 (size before relaxing)
 
-.debug_frame    0x00000000      0xb58
+.debug_frame    0x00000000      0xc20
  .debug_frame   0x00000000      0x128 ./src/main.o
  .debug_frame   0x00000128       0x2c ./src/intc_SW_mode_isr_vectors_MPC5744P.o
  .debug_frame   0x00000154      0x138 ./src/TB_UART.o
  .debug_frame   0x0000028c       0x58 ./src/TB_PIT.o
- .debug_frame   0x000002e4      0x158 ./src/TB_LTC6804.o
- .debug_frame   0x0000043c       0x7c ./src/TB_GPIO.o
- .debug_frame   0x000004b8      0x11c ./src/TB_DS1302.o
- .debug_frame   0x000005d4       0xc4 ./src/TB_CAN.o
- .debug_frame   0x00000698      0x148 ./src/TB_AnSPI.o
- .debug_frame   0x000007e0      0x10c ./src/TB_ADC.o
- .debug_frame   0x000008ec      0x154 ./src/TB_25LC256.o
- .debug_frame   0x00000a40       0x58 ./src/SysClk.o
- .debug_frame   0x00000a98       0xa0 ./src/MPC57xx__Interrupt_Init.o
- .debug_frame   0x00000b38       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
+ .debug_frame   0x000002e4       0xc8 ./src/TB_Mul6804.o
+ .debug_frame   0x000003ac      0x158 ./src/TB_LTC6804.o
+ .debug_frame   0x00000504       0x7c ./src/TB_GPIO.o
+ .debug_frame   0x00000580      0x11c ./src/TB_DS1302.o
+ .debug_frame   0x0000069c       0xc4 ./src/TB_CAN.o
+ .debug_frame   0x00000760      0x148 ./src/TB_AnSPI.o
+ .debug_frame   0x000008a8      0x10c ./src/TB_ADC.o
+ .debug_frame   0x000009b4      0x154 ./src/TB_25LC256.o
+ .debug_frame   0x00000b08       0x58 ./src/SysClk.o
+ .debug_frame   0x00000b60       0xa0 ./src/MPC57xx__Interrupt_Init.o
+ .debug_frame   0x00000c00       0x20 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)
 
 .debug_loc      0x00000000       0x41
  .debug_loc     0x00000000       0x41 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/lib/e200z4/fp\libc99.a(strlen.o)

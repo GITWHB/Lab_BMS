@@ -340,7 +340,7 @@ void DataOrganization()
 		case ADCVAX1://启动组合电池电压以及GPIO转换和轮询状态
 		{
 			SPILINE += 1;		//4
-			gCommandType=SPIWAIT2;
+			gCommandType=35;
 			sendable =1;
 			break;
 		}

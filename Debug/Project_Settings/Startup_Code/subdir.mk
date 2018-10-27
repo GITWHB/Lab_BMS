@@ -24,7 +24,7 @@ OBJS_QUOTED += \
 # Each subdirectory must supply rules for building sources it contributes
 Project_Settings/Startup_Code/startup.o: ../Project_Settings/Startup_Code/startup.S
 	@echo 'Building file: $<'
-	@echo 'Executing target #17 $<'
+	@echo 'Executing target #18 $<'
 	@echo 'Invoking: Standard S32DS Assembler'
 	powerpc-eabivle-gcc "@Project_Settings/Startup_Code/startup.args" -c -o "Project_Settings/Startup_Code/startup.o" "$<"
 	@echo 'Finished building: $<'

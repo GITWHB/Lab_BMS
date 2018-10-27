@@ -6,6 +6,7 @@
 "./src/Vector.o"
 "./src/TB_UART.o"
 "./src/TB_PIT.o"
+"./src/TB_Mul6804.o"
 "./src/TB_LTC6804.o"
 "./src/TB_GPIO.o"
 "./src/TB_DS1302.o"

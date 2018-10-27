@@ -14,6 +14,7 @@
 #include "TB_AnSPI.h"
 #include "TB_UART.h"
 #include "TB_LTC6804.h"
+#include "TB_Mul6804.h"
 
 unsigned char StartTimer=0;               //定时器开始定时的标志位
 //static unsigned int Count_PowerHold=0;    //定时辅助变量
@@ -91,7 +92,7 @@ void PIT0_CH1_ISR()    //10ms
 	PIT_0.TIMER[1].TFLG.B.TIF = 1;      //清计数完成标志位
 }
 //以下是PIT0通道0的定时中断服务函数
-void PIT0_CH0_ISR()    //100us
+void PIT0_CH0_ISR()    //0.1ms
 {
 	static char flag = 0;
 
@@ -99,15 +100,15 @@ void PIT0_CH0_ISR()    //100us
 	{
 		LED1_ON;
 		flag = 1;
+		//vol_sample(0, CellVol); //采样, 入参指定采样板编号
 	}
 	else
 	{
 		LED1_OFF;
 		flag = 0;
-
 	}
-	vol_sample(0, CellVol); //采样, 入参指定采样板编号
-	vol_sample(1, CellVol); //采样, 入参指定采样板编号
+	//vol_sample(1, CellVol); //采样, 入参指定采样板编号
+	vol_sample_Mul(CellVol); //采样, 入参指定采样板编号
 	/*static int times = 0;
 	static int count = 0;
 	++times;
@@ -179,7 +180,7 @@ int main(void)
 
     SPI_Pin_Init();
     SPI_Init();					//LTC6804通信SPI初始化
-    PIT0_CH0_Init(5000);    	//时钟为50MHz,此处计数时间为0.1ms   5000
+    PIT0_CH0_Init(5000);    	//时钟为50MHz,此处计数时间为0.1ms   50000
     Start_Pit0_CH0;				//开启定时器
     PIT0_CH1_Init(500000);    	//时钟为50MHz,此处计数时间为10ms    500000
     Start_Pit0_CH1;				//开启定时器

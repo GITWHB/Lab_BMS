@@ -18,6 +18,7 @@ C_SRCS_QUOTED += \
 "../src/TB_DS1302.c" \
 "../src/TB_GPIO.c" \
 "../src/TB_LTC6804.c" \
+"../src/TB_Mul6804.c" \
 "../src/TB_PIT.c" \
 "../src/TB_UART.c" \
 "../src/Vector.c" \
@@ -38,6 +39,7 @@ C_SRCS += \
 ../src/TB_DS1302.c \
 ../src/TB_GPIO.c \
 ../src/TB_LTC6804.c \
+../src/TB_Mul6804.c \
 ../src/TB_PIT.c \
 ../src/TB_UART.c \
 ../src/Vector.c \
@@ -55,6 +57,7 @@ OBJS_OS_FORMAT += \
 ./src/TB_DS1302.o \
 ./src/TB_GPIO.o \
 ./src/TB_LTC6804.o \
+./src/TB_Mul6804.o \
 ./src/TB_PIT.o \
 ./src/TB_UART.o \
 ./src/Vector.o \
@@ -73,6 +76,7 @@ C_DEPS_QUOTED += \
 "./src/TB_DS1302.d" \
 "./src/TB_GPIO.d" \
 "./src/TB_LTC6804.d" \
+"./src/TB_Mul6804.d" \
 "./src/TB_PIT.d" \
 "./src/TB_UART.d" \
 "./src/Vector.d" \
@@ -90,6 +94,7 @@ OBJS += \
 ./src/TB_DS1302.o \
 ./src/TB_GPIO.o \
 ./src/TB_LTC6804.o \
+./src/TB_Mul6804.o \
 ./src/TB_PIT.o \
 ./src/TB_UART.o \
 ./src/Vector.o \
@@ -108,6 +113,7 @@ OBJS_QUOTED += \
 "./src/TB_DS1302.o" \
 "./src/TB_GPIO.o" \
 "./src/TB_LTC6804.o" \
+"./src/TB_Mul6804.o" \
 "./src/TB_PIT.o" \
 "./src/TB_UART.o" \
 "./src/Vector.o" \
@@ -126,6 +132,7 @@ C_DEPS += \
 ./src/TB_DS1302.d \
 ./src/TB_GPIO.d \
 ./src/TB_LTC6804.d \
+./src/TB_Mul6804.d \
 ./src/TB_PIT.d \
 ./src/TB_UART.d \
 ./src/Vector.d \
@@ -207,9 +214,17 @@ src/TB_LTC6804.o: ../src/TB_LTC6804.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/TB_PIT.o: ../src/TB_PIT.c
+src/TB_Mul6804.o: ../src/TB_Mul6804.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #10 $<'
+	@echo 'Invoking: Standard S32DS C Compiler'
+	powerpc-eabivle-gcc "@src/TB_Mul6804.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/TB_Mul6804.o" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+src/TB_PIT.o: ../src/TB_PIT.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #11 $<'
 	@echo 'Invoking: Standard S32DS C Compiler'
 	powerpc-eabivle-gcc "@src/TB_PIT.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/TB_PIT.o" "$<"
 	@echo 'Finished building: $<'
@@ -217,7 +232,7 @@ src/TB_PIT.o: ../src/TB_PIT.c
 
 src/TB_UART.o: ../src/TB_UART.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #11 $<'
+	@echo 'Executing target #12 $<'
 	@echo 'Invoking: Standard S32DS C Compiler'
 	powerpc-eabivle-gcc "@src/TB_UART.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/TB_UART.o" "$<"
 	@echo 'Finished building: $<'
@@ -225,7 +240,7 @@ src/TB_UART.o: ../src/TB_UART.c
 
 src/Vector.o: ../src/Vector.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #12 $<'
+	@echo 'Executing target #13 $<'
 	@echo 'Invoking: Standard S32DS C Compiler'
 	powerpc-eabivle-gcc "@src/Vector.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/Vector.o" "$<"
 	@echo 'Finished building: $<'
@@ -233,7 +248,7 @@ src/Vector.o: ../src/Vector.c
 
 src/flashrchw.o: ../src/flashrchw.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #13 $<'
+	@echo 'Executing target #14 $<'
 	@echo 'Invoking: Standard S32DS C Compiler'
 	powerpc-eabivle-gcc "@src/flashrchw.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/flashrchw.o" "$<"
 	@echo 'Finished building: $<'
@@ -241,7 +256,7 @@ src/flashrchw.o: ../src/flashrchw.c
 
 src/intc_SW_mode_isr_vectors_MPC5744P.o: ../src/intc_SW_mode_isr_vectors_MPC5744P.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #14 $<'
+	@echo 'Executing target #15 $<'
 	@echo 'Invoking: Standard S32DS C Compiler'
 	powerpc-eabivle-gcc "@src/intc_SW_mode_isr_vectors_MPC5744P.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/intc_SW_mode_isr_vectors_MPC5744P.o" "$<"
 	@echo 'Finished building: $<'
@@ -249,7 +264,7 @@ src/intc_SW_mode_isr_vectors_MPC5744P.o: ../src/intc_SW_mode_isr_vectors_MPC5744
 
 src/intc_sw_handlers.o: ../src/intc_sw_handlers.S
 	@echo 'Building file: $<'
-	@echo 'Executing target #15 $<'
+	@echo 'Executing target #16 $<'
 	@echo 'Invoking: Standard S32DS Assembler'
 	powerpc-eabivle-gcc "@src/intc_sw_handlers.args" -c -o "src/intc_sw_handlers.o" "$<"
 	@echo 'Finished building: $<'
@@ -257,7 +272,7 @@ src/intc_sw_handlers.o: ../src/intc_sw_handlers.S
 
 src/main.o: ../src/main.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #16 $<'
+	@echo 'Executing target #17 $<'
 	@echo 'Invoking: Standard S32DS C Compiler'
 	powerpc-eabivle-gcc "@src/main.args" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -c -o "src/main.o" "$<"
 	@echo 'Finished building: $<'
