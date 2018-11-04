@@ -7,6 +7,9 @@
 
 #include "TB_ADC.h"
 //注:
+//测试板V1.0端口对应:
+//ADC1_CH2	IDC1	电流
+//ADC1_CH3	ADT1	温度
 //换通道时，需要改的地方:
 //void     ADC1_CH3_PinInit()   中的引脚号
 //uint16_t ADC1_CH3_ReadData()  中的通道号
@@ -42,6 +45,7 @@ uint32_t ADC1_Calibration()
 void ADC1_Init()
 {
 	ADC_1.MCR.B.PWDN     = 1;      //Power Down
+	ADC_1.MCR.B.WLSIDE	 = 0;	   //转换结果右对齐
 	ADC_1.MCR.B.OWREN    = 1;      //转换数据可重写
 	ADC_1.MCR.B.MODE     = 0;      //单次模式
 	ADC_1.MCR.B.ADCLKSEL = 1;      //ADC_Clock = Bus Clock
@@ -52,23 +56,27 @@ void ADC1_StartConvert()
 	while(ADC_1.MSR.B.NSTART);  //等待正在进行的转换结束
 	ADC_1.MCR.B.NSTART = 1;     //开始转换
 }
-uint16_t ADC1_CH3_ReadData()
+double ADC1_CH3_ReadData()
 {
-	uint16_t temp,result_mv = 0;
+	uint16_t temp;
+	double t, result_mv = 0;
 	while(!ADC_1.ISR.B.EOC);
-	temp = ADC_1.CDR[3].B.CDATA;//读取转换结果      CDR[x],其中x对应的是如通道号
+	temp = ADC_1.CDR[3].B.CDATA;//读取转换结果      CDR[x],其中x对应的是通道号
 	//转换为mV，因为是12位AD，所以最大为0xFFF
-	result_mv = (uint16_t)(ADC_VREF * temp / 0xFFF);
+	t = ADC_VREF * temp;
+	result_mv = (double)( t / (double)0xFFF);
 
 	return result_mv;
 }
-uint16_t ADC1_CH2_ReadData()
+double ADC1_CH2_ReadData()
 {
-	uint16_t temp,result_mv = 0;
+	uint16_t temp;
+	double t, result_mv = 0;
 	while(!ADC_1.ISR.B.EOC);
-	temp = ADC_1.CDR[2].B.CDATA;//读取转换结果      CDR[x],其中x对应的是如通道号
+	temp = ADC_1.CDR[2].B.CDATA;//读取转换结果      CDR[x],其中x对应的是通道号
 	//转换为mV，因为是12位AD，所以最大为0xFFF
-	result_mv = (uint16_t)(ADC_VREF * temp / 0xFFF);
+	t = ADC_VREF * temp;
+	result_mv = (double)( t / (double)0xFFF);
 
 	return result_mv;
 }

@@ -10,13 +10,13 @@
 
 #include "project.h"
 
-#define ADC_VREF       3300      //参考电压 单位: 毫伏 mV
+#define ADC_VREF       3289      //参考电压 单位: 毫伏 mV
 
 void ADC1_CH3_PinInit();
 void ADC1_CH2_PinInit();
 uint32_t ADC1_Calibration();
 void ADC1_Init();
 void ADC1_StartConvert();
-uint16_t ADC1_CH3_ReadData();
-uint16_t ADC1_CH2_ReadData();
+double ADC1_CH3_ReadData();
+double ADC1_CH2_ReadData();
 #endif /* TB_ADC_H_ */

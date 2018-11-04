@@ -63,7 +63,8 @@ char  FFF = 0;
 char       Read_25LC256_buffer[1000] = {'S'};
 char       Write_25LC256_buffer[100] = {'A'};
 char       DataRec_485[15];   //用来存储从485接收到的数据
-int 	   CellVol[2][12] = {0};
+int 	   CellVol[2][12] = {0};//用来存储LTC6804采集的电压
+double     Data_ADC_I = 0;	  //用来存储电流转换结果
 //delay   延时函数
 void delay_test0(unsigned int t);
 extern void xcptn_xmpl(void);
@@ -109,8 +110,8 @@ void PIT0_CH0_ISR()    //0.1ms
 	}
 	//vol_sample(0, CellVol); //采样, 入参指定采样板编号
 	//vol_sample(1, CellVol); //采样, 入参指定采样板编号
+	//vol_sample_Mul(CellVol); //顺序采样
 
-	vol_sample_Mul(CellVol); //顺序采样
 	/*static int times = 0;
 	static int count = 0;
 	++times;
@@ -179,19 +180,24 @@ int main(void)
     LED1_ON;
     LED2_ON;
     LED3_OFF;
-
+/*
     SPI_Pin_Init();
     SPI_Init();					//LTC6804通信SPI初始化
     PIT0_CH0_Init(5000);    	//时钟为50MHz,此处计数时间为0.1ms   50000
     Start_Pit0_CH0;				//开启定时器
     PIT0_CH1_Init(500000);    	//时钟为50MHz,此处计数时间为10ms    500000
     Start_Pit0_CH1;				//开启定时器
-
+*/
+    ADC1_CH2_PinInit();
+    ADC1_Calibration();
+    ADC1_Init();
 
     //这里必须加while(1)死循环
     while(1)
     {
-    	delay_test0(100);
+    	delay_test0(5000);
+    	ADC1_StartConvert();
+    	Data_ADC_I = ADC1_CH2_ReadData();
     }
 
     return 0;
@@ -199,7 +205,7 @@ int main(void)
 void delay_test0(unsigned int t)
 {
 	int i,j;
-	j=1000;     //2  0.8us
+	j=1000;     //1000  400us
 	for(i=0;i<t;i++)
 	{
 		while(j > 0)
