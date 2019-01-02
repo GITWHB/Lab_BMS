@@ -18,6 +18,7 @@ src/main.o: ../src/main.c \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_GPIO.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/project.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/MPC5744P.h \
+ D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_common.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_PIT.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_ADC.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_CAN.h \
@@ -26,7 +27,13 @@ src/main.o: ../src/main.c \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_AnSPI.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_UART.h \
  D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_LTC6804.h \
- D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_Mul6804.h
+ D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_Mul6804.h \
+ D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/string.h \
+ D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/cstring \
+ D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/null.h \
+ D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/size_t.h \
+ D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/ewl_rsize_t.h \
+ D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/string_api.h
 
 D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/lib_c99.prefix:
 
@@ -66,6 +73,8 @@ D:/MPC5744P/Project/Power1.2/TestBorad/include/project.h:
 
 D:/MPC5744P/Project/Power1.2/TestBorad/include/MPC5744P.h:
 
+D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_common.h:
+
 D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_PIT.h:
 
 D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_ADC.h:
@@ -83,3 +92,15 @@ D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_UART.h:
 D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_LTC6804.h:
 
 D:/MPC5744P/Project/Power1.2/TestBorad/include/TB_Mul6804.h:
+
+D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/string.h:
+
+D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/cstring:
+
+D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/null.h:
+
+D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/size_t.h:
+
+D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/ewl_rsize_t.h:
+
+D:/Software/NXP/S32DS_Power_v1.2/S32DS/e200_ewl2/EWL_C/include/string_api.h:

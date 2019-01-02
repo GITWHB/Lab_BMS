@@ -41,7 +41,7 @@ EEPROM_Write_Mul(0x04,strlen(Write_25LC256_buffer),Write_25LC256_buffer);
 delay_test0(1000);delay_test0(1000);delay_test0(1000);delay_test0(1000);
 EEPROM_Read_Mul(0x0004,strlen(Write_25LC256_buffer),Read_25LC256_buffer);
 delay_test0(1000);
-6、LTC6847数据采集
+6、LTC68004数据采集
 SPI_Pin_Init();
 SPI_Init();					//LTC6804通信SPI初始化
 PIT0_CH0_Init(5000);    	//时钟为50MHz,此处计数时间为0.1ms   50000
@@ -53,3 +53,14 @@ vol_sample(0, CellVol); //采样, 入参指定采样板编号
 vol_sample(1, CellVol); //采样, 入参指定采样板编号
 方式二:
 vol_sample_Mul(CellVol); //顺序采样
+7、UART_232   
+用的是UART0
+//初始化    100代表    100MHz的时钟源
+UART0_Init(100,9600);
+const char* str = "!$%First Test%*(";
+//数据处理标志判断
+if(RecCompleteFlag == 1)
+{
+    UART0_SendStr(DataRec_232);
+    RecCompleteFlag = 0;
+}

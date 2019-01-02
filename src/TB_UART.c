@@ -14,7 +14,17 @@
 
 unsigned char UARTFirstTransmitFlag_0;
 unsigned char UARTFirstTransmitFlag_1;
-//example:	UART_Init(100,9600);
+static void delay_test(unsigned int t)
+{
+	int i,j;
+	j=1000;     //1000  400us
+	for(i=0;i<t;i++)
+	{
+		while(j > 0)
+			j--;
+	}
+}
+//example:	UART0_Init(100,9600);
 void UART0_Init(unsigned int MegaHertz, unsigned int BaudRate)
 {
 	  unsigned int Fraction;
@@ -26,6 +36,7 @@ void UART0_Init(unsigned int MegaHertz, unsigned int BaudRate)
 	  LINFlexD_0.LINCR1.B.SLEEP = 0;    /* Exit Sleep Mode */
 	  LINFlexD_0.UARTCR.B.UART = 1;     /* UART Enable- Req'd before UART config.*/
 	  LINFlexD_0.UARTCR.R = 0x0033;     /* UART Ena, 1 byte tx, no parity, 8 data*/
+
 	  LINFlexD_0.UARTSR.B.SZF = 1;      /* CHANGE THIS LINE   Clear the Zero status bit */
 	  LINFlexD_0.UARTSR.B.DRFRFE = 1;   /* CHANGE THIS LINE  Clear DRFRFE flag - W1C */
 	  //波特率的配置与计算
@@ -67,9 +78,10 @@ void UART0_Send(uint8_t Data)
 void UART0_SendStr(char *str)
 {
 	unsigned char i=0;
-	for(i=0;i<strlen(str);i++)
+	for(i=0;i<(strlen(str));i++)
 	{
 		UART0_Send(str[i]);
+		delay_test(50);
 	}
 }
 unsigned char UART0_Rec()

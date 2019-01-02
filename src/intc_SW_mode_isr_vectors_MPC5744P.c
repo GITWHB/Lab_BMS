@@ -21,6 +21,8 @@ void dummy 						  (void);
 extern void PIT0_CH0_ISR();
 extern void PIT0_CH1_ISR();
 extern void CAN0_Rec_ISR();
+extern void CAN1_Rec_ISR();
+extern void CAN2_Rec_ISR();
 extern void UART0_ISR();
 extern void UART1_ISR();
 extern void SPI_REC_ISR();
@@ -570,7 +572,7 @@ const uint32_t __attribute__ ((section (".intc_vector_table"))) IntcIsrVectorTab
 (uint32_t) &dummy, /* Vector # 532 Reserved FlexCAN_0 */
 (uint32_t) &dummy, /* Vector # 533 FLEXCAN_ESR[ERR_INT] FlexCAN_1 */
 (uint32_t) &dummy, /* Vector # 534 FLEXCAN_ESR_BOFF | FLEXCAN_Transmit_Warning | FLEXCAN_Receive_Warning FlexCAN_1 */
-(uint32_t) &dummy, /* Vector # 535 FLEXCAN_BUF_00_03 FlexCAN_1 */
+(uint32_t) &CAN1_Rec_ISR, /* Vector # 535 FLEXCAN_BUF_00_03 FlexCAN_1 */
 (uint32_t) &dummy, /* Vector # 536 FLEXCAN_BUF_04_07 FlexCAN_1 */
 (uint32_t) &dummy, /* Vector # 537 FLEXCAN_BUF_08_11 FlexCAN_1 */
 (uint32_t) &dummy, /* Vector # 538 FLEXCAN_BUF_12_15 FlexCAN_1 */
@@ -583,7 +585,7 @@ const uint32_t __attribute__ ((section (".intc_vector_table"))) IntcIsrVectorTab
 (uint32_t) &dummy, /* Vector # 545 Reserved FlexCAN_1 */
 (uint32_t) &dummy, /* Vector # 546 FLEXCAN_ESR[ERR_INT] FlexCAN_2 */
 (uint32_t) &dummy, /* Vector # 547 FLEXCAN_ESR_BOFF | FLEXCAN_Transmit_Warning | FLEXCAN_Receive_Warning FlexCAN_2 */
-(uint32_t) &dummy, /* Vector # 548 FLEXCAN_BUF_00_03 FlexCAN_2 */
+(uint32_t) &CAN2_Rec_ISR, /* Vector # 548 FLEXCAN_BUF_00_03 FlexCAN_2 */
 (uint32_t) &dummy, /* Vector # 549 FLEXCAN_BUF_04_07 FlexCAN_2 */
 (uint32_t) &dummy, /* Vector # 550 FLEXCAN_BUF_08_11 FlexCAN_2 */
 (uint32_t) &dummy, /* Vector # 551 FLEXCAN_BUF_12_15 FlexCAN_2 */

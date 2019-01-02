@@ -12,6 +12,7 @@
 
 #define UART_DTFTFF             0x0002 /* Data transmit complete */
 #define UART_DRFRFE             0x0004 /* Data reception complete */
+#define MAXLENGTH 				30
 
 void UART0_Init(unsigned int MegaHertz, unsigned int BaudRate);
 void UART0_Send(uint8_t Data);

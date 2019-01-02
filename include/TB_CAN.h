@@ -31,11 +31,18 @@
 
 
 void initCAN_0();
-void CAN_Trans(uint8_t Data_length,uint8_t TxData[]);
-void CAN_Rec_LoopBack();
-void CAN_Rec_Interrupt(uint32_t *RxCODE_T,uint32_t *RxID_T,uint32_t *Length,uint8_t *Buff);
+void CAN0_Trans(uint8_t Data_length,uint8_t TxData[]);
+void CAN0_Rec_LoopBack();
+void CAN0_Rec_Interrupt(uint32_t *RxCODE_T,uint32_t *RxID_T,uint32_t *Length,uint8_t *Buff);
 
-void FlexCAN0_Init();
+void initCAN_1();
+void CAN1_Trans(uint8_t Data_length,uint8_t TxData[]);
+void CAN1_Rec_LoopBack();
+void CAN1_Rec_Interrupt(uint32_t *RxCODE_T,uint32_t *RxID_T,uint32_t *Length,uint8_t *Buff);
 
+void initCAN_2();
+void CAN2_Trans(uint8_t Data_length,uint8_t TxData[]);
+void CAN2_Rec_LoopBack();
+void CAN2_Rec_Interrupt(uint32_t *RxCODE_T,uint32_t *RxID_T,uint32_t *Length,uint8_t *Buff);
 
 #endif /* TB_CAN_H_ */
